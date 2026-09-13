@@ -1,0 +1,2 @@
+{:config-paths ["exports/open-hax/kondo-config"]
+ :linters {:unresolved-symbol {:exclude [await]}}}
