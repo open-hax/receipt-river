@@ -5,9 +5,11 @@ import { fileURLToPath } from "node:url";
 
 const repositoryRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-const packageNames = process.argv[2]
-  ? [process.argv[2]]
-  : ["receipt-river", "session-mycology", "fork-tax"];
+// This repository owns one package. The donor monorepo passed sibling names
+// here; an extracted repository can only lint its own sources.
+const packageNames = process.argv[2] ? [process.argv[2]] : ["receipt-river"];
+
+const ownPackageName = "receipt-river";
 
 const forbiddenForms = [
   ["Raw JavaScript escape hatch", /\bjs\*/],
@@ -32,9 +34,17 @@ function cljsFiles(directory) {
 const violations = [];
 
 for (const packageName of packageNames) {
-  const sourceRoot = path.join(repositoryRoot, "packages", packageName, "src", "cljs");
+  // Standalone layout. The donor kept these sources under
+  // packages/<name>/src/cljs; this repository is the package.
+  const sourceRoot = path.join(repositoryRoot, "src", "cljs");
+  if (packageName !== ownPackageName) {
+    violations.push(
+      `${packageName}: not owned by this repository (${ownPackageName})`,
+    );
+    continue;
+  }
   if (!fs.existsSync(sourceRoot)) {
-    violations.push(`${packageName}: source root does not exist`);
+    violations.push(`${packageName}: ${path.relative(repositoryRoot, sourceRoot)} does not exist`);
     continue;
   }
 
