@@ -18,11 +18,13 @@ pnpm10.14.0. The producer records installation plus the existing `lint:kondo`,
 `test` and `build` package commands and diff hygiene. Failed installation gives
 the dependent gates exit125; no skipped gate is a pass.
 
-This package has no committed pnpm lockfile. Installation therefore explicitly
-uses `--no-frozen-lockfile --lockfile=false`: it preserves the existing package
-policy and avoids leaving a new untracked lockfile during exact-clean-head
-verification. Resolved dependencies are not reproducibly frozen by this caller.
-The recorded execution is evidence for that run, not a future dependency bound.
+The package commits `pnpm-lock.yaml`. Installation uses `--frozen-lockfile`,
+the same install as `receipt-river-ci.yml`, so the review gates resolve the
+dependency versions that release CI exercises, and a lockfile that no longer
+matches `package.json` fails the install gate instead of being re-resolved.
+A frozen install does not update `pnpm-lock.yaml`. The pinned receiver checks
+tracked and untracked worktree status after deterministic execution; the
+recorded result is evidence for that run and that lockfile.
 
 ## Publisher and generated inputs
 
