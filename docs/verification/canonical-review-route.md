@@ -22,8 +22,9 @@ The package commits `pnpm-lock.yaml`. Installation uses `--frozen-lockfile`,
 the same install as `receipt-river-ci.yml`, so the review gates resolve the
 dependency versions that release CI exercises, and a lockfile that no longer
 matches `package.json` fails the install gate instead of being re-resolved.
-A frozen install writes no lockfile, so the exact-clean-head checkout stays
-clean. The recorded execution is evidence for that run and that lockfile.
+A frozen install does not update `pnpm-lock.yaml`. The pinned receiver checks
+tracked and untracked worktree status after deterministic execution; the
+recorded result is evidence for that run and that lockfile.
 
 ## Publisher and generated inputs
 
