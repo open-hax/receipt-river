@@ -24,7 +24,7 @@ jobs:
       evidence_gates_script: |
         run_gate diff_stat git diff --stat "${PR_BASE_SHA}...HEAD"
         run_gate diff_hygiene git diff --check "${PR_BASE_SHA}...HEAD"
-        run_gate install pnpm install --no-frozen-lockfile --lockfile=false
+        run_gate install pnpm install --frozen-lockfile
         install_status="$(awk -F= '$1 == "install" {print $2}' "$statuses")"
         if [[ "$install_status" == "0" ]]; then
           run_gate lint pnpm lint:kondo
