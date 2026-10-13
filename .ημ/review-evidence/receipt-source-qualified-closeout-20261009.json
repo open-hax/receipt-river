@@ -1,0 +1,64 @@
+{
+  "tier": "observed",
+  "observed_at": "2026-10-09T07:45:14.867294Z",
+  "source_merge": "5eeb77e035c17160416d0a092415b39b3de55133",
+  "operations": [
+    {
+      "operation": "fixture-comment",
+      "exit": 0,
+      "stdout_sha256": "681b6b8a360803d3342b3122a09340796f501d293a4c9d6798269d2e9b673b55"
+    },
+    {
+      "operation": "fixture-done",
+      "exit": 0,
+      "stdout_sha256": "5535c4408f98ddc750e12de1591834281a80561d12f4c948b82911e7bdc3c016"
+    },
+    {
+      "operation": "fixture-readback",
+      "exit": 0,
+      "stdout_sha256": "ca7eb814a2f2a121e6020ccf72ce4613face6c676adca370868df49b25f5f4f7"
+    },
+    {
+      "operation": "compatibility-comment",
+      "exit": 0,
+      "stdout_sha256": "6899b01f749c1bf248ce866d6f3e8c8cd48793baa498b4cf1b785da2ccb96741"
+    },
+    {
+      "operation": "compatibility-readback",
+      "exit": 0,
+      "stdout_sha256": "ab69cf24cf4bc145f685cd2194cd90cbeb6cabd49c5f7646d376d0007bd9bfaa"
+    }
+  ],
+  "original_event_prefix_unchanged": true,
+  "fixture_done_native": true,
+  "compatibility_review_native_pending_actual_receiver_acceptance": true,
+  "before": {
+    "docs/kanban/baseline-discovery-test-git-arity.md": {
+      "bytes": 7185,
+      "sha256": "0bace4ffe332a5c56ac0a179f76ce8b47803a6632e7f3c880b10acc2a4dab1eb"
+    },
+    "docs/kanban/containing-repository-receipt-compatibility.md": {
+      "bytes": 12087,
+      "sha256": "8c5f311d074aae0225205edfb0dcc262d6753c8bf14977ac7a1610b20816d231"
+    },
+    "docs/kanban/.events/ledger.edn": {
+      "bytes": 11009,
+      "sha256": "af017fa8b2e4b92de4f8c09339d462817ae808bb5f75dacebf536131b1a90f1c"
+    }
+  },
+  "after": {
+    "docs/kanban/baseline-discovery-test-git-arity.md": {
+      "bytes": 7846,
+      "sha256": "6209033922a0dce808b47353b4e8724cc28daf0fb13ca2d04fa7576a4d1a09f3"
+    },
+    "docs/kanban/containing-repository-receipt-compatibility.md": {
+      "bytes": 12627,
+      "sha256": "932838d603da4682ac7a13658e67794f5f2fe00b0f234bbc611371b43a940b9f"
+    },
+    "docs/kanban/.events/ledger.edn": {
+      "bytes": 13460,
+      "sha256": "653c65f5e8047429b9b1869e5875c8613ec7f2cb765cfdb71d91fd3390a394a6"
+    }
+  },
+  "character_milestone_complete": false
+}

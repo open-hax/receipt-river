@@ -1,0 +1,174 @@
+{
+  "schema": "codex.receipt-discovery-causal-diagnostic/v1",
+  "observed_at": "2026-10-08T23:06:29.418940Z",
+  "tier": "Actual diagnostic command output plus authenticated hosted artifact; causal comparison is coordinator-derived, not a provider approval or full-suite pass.",
+  "head": "6370ff968841115e681e2b21d80277fd0f0a0289",
+  "base": "154440f3c997aa9208194bba59b5edbef3654f78",
+  "original_source_history": {
+    "initial_extraction": "7c7c62343fea0241ac545e37f14e57ab344bfa30",
+    "donor": "open-hax/eta-mu@af02f4e6",
+    "only_repository_commit_modifying_fixture_or_git_boundary": "7c7c62343fea0241ac545e37f14e57ab344bfa30",
+    "prior_passing_suite_evidence": null,
+    "classification": "baseline fixture defect; no known prior passing behavior established"
+  },
+  "owning_sources": {
+    "src/cljs/eta_mu/receipt_river/extern/git.cljs": {
+      "bytes": 2587,
+      "sha256": "12140ed090349f961ae4119b68a8750f2ff63c211531eed2396c1b8a35155852",
+      "worktree_equal_base_equal_head": true
+    },
+    "src/cljs/eta_mu/receipt_river/infra/local_git_provider.cljs": {
+      "bytes": 6197,
+      "sha256": "aebdd62166f66c16877ab952095b85fb84e177141043981333ac82aa3ad0d251",
+      "worktree_equal_base_equal_head": true
+    },
+    "test/cljs/eta_mu/receipt_river/discovery_test.cljs": {
+      "bytes": 17066,
+      "sha256": "cd949821285ac3fa016fff53cc2c02b942949c5c69afa576419f3fbfdcd9e065",
+      "worktree_equal_base_equal_head": true
+    },
+    "shadow-cljs.edn": {
+      "bytes": 834,
+      "sha256": "057744577807cb61743ebf81387e77da66073b6cfc0dc41ba9216dcd25cd1918",
+      "worktree_equal_base_equal_head": true
+    },
+    "package.json": {
+      "bytes": 847,
+      "sha256": "cbad4b9e395ca11d33906f05b97503bbfb2de6cd5ad4ea544f2456f38ecc1b6d",
+      "worktree_equal_base_equal_head": true
+    }
+  },
+  "hosted": {
+    "run": 37735171347,
+    "artifact": 11531594218,
+    "zip_bytes": 39731,
+    "zip_sha256": "6232419d824870cd9eb053ba77035cd32e41ff21e3b278e664fb7f1b284dc7c1",
+    "summary": {
+      "schema": "open-hax.review-evidence/v2",
+      "repository": "riatzukiza/receipt-river",
+      "pull_request": 1,
+      "base_sha": "154440f3c997aa9208194bba59b5edbef3654f78",
+      "expected_head_sha": "6370ff968841115e681e2b21d80277fd0f0a0289",
+      "executed_sha": "6370ff968841115e681e2b21d80277fd0f0a0289",
+      "completion_sha": "6370ff968841115e681e2b21d80277fd0f0a0289",
+      "head_sha": "6370ff968841115e681e2b21d80277fd0f0a0289",
+      "exact_head": true,
+      "clean_checkout": true,
+      "generated_at": "2026-10-08T06:15:49.068Z",
+      "result": "failure",
+      "statuses": {
+        "diff_stat": 0,
+        "diff_hygiene": 0,
+        "install": 0,
+        "lint": 0,
+        "test": 1,
+        "build": 0
+      },
+      "attempted": {
+        "diff_stat": true,
+        "diff_hygiene": true,
+        "install": true,
+        "lint": true,
+        "test": true,
+        "build": true
+      },
+      "errors": [],
+      "interpretation": "Exit 125 means the gate was skipped because a required prerequisite failed."
+    },
+    "selected_actual_stack": [
+      "var map__8344 = (await eta_mu.receipt_river.extern.git.exec_at.cljs$core$IFn$_invoke$arity$2(path,args));",
+      "                                                               ^",
+      "",
+      "TypeError: eta_mu.receipt_river.extern.git.exec_at.cljs$core$IFn$_invoke$arity$2 is not a function",
+      "    at Object.eta_mu$receipt_river$infra$local_git_provider$git_value [as git_value] (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:137:64)",
+      "    at eta_mu$receipt_river$infra$local_git_provider$enrich (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:150:199)",
+      "    at /home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:19659:135",
+      "    at /home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8367:96",
+      "    at Function.cljs$core$IFn$_invoke$arity$3 (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8368:3)",
+      "    at Object.cljs$core$IReduce$_reduce$arity$3 (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:11992:29)",
+      "    at Function.cljs$core$IFn$_invoke$arity$3 (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8521:13)",
+      "    at Function.cljs$core$IFn$_invoke$arity$2 (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:19658:52)",
+      "    at Object.eta_mu$receipt_river$infra$local_git_provider$enrich_candidates [as enrich_candidates] (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:201:136)",
+      "    at Object.eta_mu$receipt_river$infra$local_git_provider$discover_STAR_ [as discover_STAR_] (/home/runner/work/receipt-river/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:221:70)",
+      "",
+      "Node.js v22.20.0",
+      " ELIFECYCLE  Test failed. See above for more details."
+    ],
+    "node": "v22.20.0",
+    "all_six_gates_attempted": true,
+    "test_exit": 1,
+    "full_suite_count_established": false
+  },
+  "probe": {
+    "source_scope": "Two/three-arity original function and single-arity replacement preserve the representation seam, with constant bodies and zero Git processes. This does not execute owning discovery, async callbacks or full suite.",
+    "compiler": "ClojureScript1.12.145 from existing cached55file classpath",
+    "node": "v24.14.1",
+    "options": {
+      "static-fns": true,
+      "optimizations": "none",
+      "target": "nodejs"
+    },
+    "compile_exit": 0,
+    "corrected_execution_exit": 0,
+    "observation": {
+      "schema": "codex.cljs-arity-representation-probe/v1",
+      "production-git-processes-started": 0,
+      "static-fns": true,
+      "optimizations": "none",
+      "mechanism-reproduced": true,
+      "node": "v24.14.1",
+      "original-arity-property": true,
+      "control": "original",
+      "production-test-suite-executed": false,
+      "original-restored": "original",
+      "source-or-test-repair": false,
+      "replacement-observation": {
+        "error-name": "TypeError",
+        "message": "diagnostic.arity.exec_at.cljs$core$IFn$_invoke$arity$2 is not a function"
+      },
+      "replacement-arity-property": false
+    },
+    "matching_hosted_mechanism": "Caller resolves cljs$core$IFn$_invoke$arity$2 from a single-arity replacement which lacks that property; TypeError occurs before the replacement body. Original remains callable after restoration.",
+    "limits": "Different localNode/compiler environment; no exactNode22.20 owning-suite rerun or repair demonstrated. No production timeout/concurrency/identity behavior changed.",
+    "initial_execution_failure": "Absolute generated output-dir was joined to private cwd by the generated Node bootstrap; first run MODULE_NOT_FOUND/exit1 is retained. Unchanged compiled output then ran from cwd / with exit0. This was an operator diagnostic-launch failure, not the hosted defect."
+  },
+  "repair_direction": "Preserve a callable compiled arity boundary in the test double and its original bounded-concurrency assertions; verify full owning suite after planning/scope/Ready. Do not weaken production Git timeout or bypass source validation.",
+  "scope": {
+    "existing_baseline_card": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "existing_compatibility_card": "4caf6f31-9e54-49e0-b6fc-34d2d8414ff0",
+    "scope_choice_pending": true,
+    "no_native_ready": true,
+    "no_owning_test_or_source_patch": true,
+    "character_B1_B2_B3": "unfinished"
+  },
+  "resources": {
+    "available_before_bytes": 15985807360,
+    "under20GiBFloor": true,
+    "new_full_copy": false,
+    "dependency_installation": false,
+    "cached_compiler_only": true,
+    "expensive_jobs_in_flight_after_probe": 0
+  },
+  "evidence_files": [
+    {
+      "path": ".ημ/review-evidence/receipt-discovery-arity-diagnostic-20261008.cljs",
+      "bytes": 1946,
+      "sha256": "790edd112d981a6870ff68ec630de522ba343a180c60d207e312a80012025019"
+    },
+    {
+      "path": ".ημ/review-evidence/receipt-discovery-arity-diagnostic-20261008.compiled.js",
+      "bytes": 4676,
+      "sha256": "b8bdbdb9a7a3db831ec994c20a60fc77c0553775217a8df3b698a669bfcb1813"
+    },
+    {
+      "path": ".ημ/review-evidence/receipt-discovery-arity-diagnostic-20261008.compiled.js.map",
+      "bytes": 2249,
+      "sha256": "2edff654aa3564d013c7a922d152851debb44803bf9274599b86d9244ec99690"
+    },
+    {
+      "path": ".ημ/review-evidence/receipt-discovery-arity-diagnostic-20261008.stdout.json",
+      "bytes": 503,
+      "sha256": "e13f9b7190d940b99bdd3410379e14d3bd58dc9ce0159663f9ee5c22135b3859"
+    }
+  ]
+}

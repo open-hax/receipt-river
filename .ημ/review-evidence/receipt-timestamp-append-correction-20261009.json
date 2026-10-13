@@ -1,0 +1,170 @@
+{
+  "production-law-changed": false,
+  "original-prefix-byte-identical": true,
+  "thread": "PRRT_kwDOU4Vgrc6qrZV2",
+  "tier": "observed-command-output-transcription",
+  "corrections": [
+    {
+      "original-line": 17,
+      "original-sha256": "b98265254fd914bd2523499a5b8dd46af616ef191b604a2f3f7bc1f2f5ca4ed8",
+      "original-contextual-errors": [
+        "invalid ts: 2026-10-09T06:27:10.240339+00:00"
+      ],
+      "original-context-free-errors": [
+        "missing required key: repo",
+        "invalid ts: 2026-10-09T06:27:10.240339+00:00"
+      ],
+      "corrected-record": {
+        "pi": "Accepted character B1B2B3 receipt/reviewer/physical-field prerequisite",
+        "tests": "Actual32tests231assertions0failures0errors/0compilerwarnings; builtpublic15casesPASS; normal lint0/0/externPASS; actionlint/diffPASS; immutable source/prefixchecksPASS. Local Node22.18.0 not hosted22.20.0 qualification.",
+        "refs": [
+          "parentee4c7e3d85449b984d19443abed427328533bcad",
+          "fixture52341b203553b93cca7f4242dfc04a75e3dc8fcf",
+          "redee4c7e3d85449b984d19443abed427328533bcad",
+          "mimo5466026271/coderabbitplanning6075302385",
+          "proofsha256859caf3ec3a57af27a7d98ca9aaed01284c5dc99d41ee4fe564eaedd27dc9847"
+        ],
+        "dod": "Contextual historical compatibility GREEN with original receipts and strict envelope laws preserved",
+        "manifest": [
+          ".github/workflows/eta-mu-review.yml",
+          "README.md",
+          "package.json",
+          "src/cljs/eta_mu/receipt_river/api.cljs",
+          "src/cljs/eta_mu/receipt_river/infra/cli.cljs",
+          "src/cljs/eta_mu/receipt_river/law/receipt.cljc",
+          "test/cljs/eta_mu/receipt_river/compatibility_test.cljs",
+          "test/js/compatibility_public_api.mjs",
+          "test/fixtures/receiver-repo-less-1c4c53.edn",
+          "docs/kanban/containing-repository-receipt-compatibility.md",
+          "docs/kanban/.events/ledger.edn",
+          ".ημ/review-evidence/receipt-context-compatibility-green-20261009.json"
+        ],
+        "correction": {
+          "head": "5133570de5877f13e76271b16f27a3b41360c613",
+          "line": 17,
+          "sha256": "b98265254fd914bd2523499a5b8dd46af616ef191b604a2f3f7bc1f2f5ca4ed8",
+          "origin": "cephalon-receipt-containing-context-green-20261009",
+          "path": ".ημ/receipts.edn",
+          "semantics": "Original remains invalid under unchanged strict timestamp law; this correction is independently valid, not a fold or waiver.",
+          "instruction": "Append a new receipt in correction or leave it; never rewrite historical receipts.",
+          "normalized-original-ts": "2026-10-09T06:27:10.240339Z",
+          "time-semantics": "New correction recorded now; original occurrence timestamp is retained separately.",
+          "ts": "2026-10-09T06:27:10.240339+00:00"
+        },
+        "note": "Reviewed native-Ready compatibility implements pure .cljc decision before API/CLI adapters. Actual fullRED32/23139fail0error -> GREEN32/231zero; actual builtESM15casesPASS. Old2arity remainsstrict; validthirdstring supplies closedpuremap, derives separate context and retains rawline/event/schema/ordinal/originaldiagnostics. Strictversion1/existingnil/otherfieldsunchanged, original10437byte receiver suffix and originalstrictlawblockbyteidentical. Only retired owning.cljs kondo cache archived/removed afterrename; normalunchangedlint0/0/externPASS, actionlint/diffPASS. NativeRheoscomment and InProgress->Review readback succeeded; first missing--to refusal preserved and mutation not repeated. Source candidate will require fresh exact-head hosted gates/approval; no source merge/cardDone/receiver acceptance/B1B2B3/authority/runtime/publication/deployment change. Heartbeatpaused,goalACTIVE.",
+        "ts": "2026-10-09T07:05:16.871Z",
+        "host": "Owning package, actual release ESM API and native qualified Rheos",
+        "kind": "test-run",
+        "origin": "cephalon-receipt-containing-context-green-20261009-timestamp-correction",
+        "owner": "codex"
+      },
+      "corrected-contextual-errors": [],
+      "corrected-context-free-errors": [
+        "missing required key: repo"
+      ]
+    },
+    {
+      "original-line": 18,
+      "original-sha256": "f44c34ca1686b41308de1d12a09f2993f89d52b4d548943be75ca408651d240d",
+      "original-contextual-errors": [
+        "invalid ts: 2026-10-09T06:27:53.724082+00:00"
+      ],
+      "original-context-free-errors": [
+        "missing required key: repo",
+        "invalid ts: 2026-10-09T06:27:53.724082+00:00"
+      ],
+      "corrected-record": {
+        "pi": "Cephalon scoped receipt prerequisite",
+        "refs": [
+          "rename-only901f488bffaddc342ba10a0e08959688b7c20abf"
+        ],
+        "dod": "Preserve staging-failure history and commit actual owned GREEN candidate",
+        "manifest": [
+          "src/cljs/eta_mu/receipt_river/law/receipt.cljc",
+          ".ημ/review-evidence/receipt-context-compatibility-green-20261009.json"
+        ],
+        "correction": {
+          "head": "5133570de5877f13e76271b16f27a3b41360c613",
+          "line": 18,
+          "sha256": "f44c34ca1686b41308de1d12a09f2993f89d52b4d548943be75ca408651d240d",
+          "origin": "cephalon-receipt-explicit-staging-correction-20261009",
+          "path": ".ημ/receipts.edn",
+          "semantics": "Original remains invalid under unchanged strict timestamp law; this correction is independently valid, not a fold or waiver.",
+          "instruction": "Append a new receipt in correction or leave it; never rewrite historical receipts.",
+          "normalized-original-ts": "2026-10-09T06:27:53.724082Z",
+          "time-semantics": "New correction recorded now; original occurrence timestamp is retained separately.",
+          "ts": "2026-10-09T06:27:53.724082+00:00"
+        },
+        "note": "Explicit gitadd included already-retired old .cljs path after gitmv; git refused pathspec. The shell continued and committed only previously staged byte-identical rename as 901f488bffaddc342ba10a0e08959688b7c20abf; no source behavior or proof was committed there and no push/review occurred. Preserve ordinary history; corrected explicit current paths stage the actual GREEN law/API/CLI/workflow/docs/nativeevents/proof/journals in the next commit. Initialstagingfailure is operator evidence, not product failure/qualification. GREEN proof remains immutable859caf3ec3a57af27a7d98ca9aaed01284c5dc99d41ee4fe564eaedd27dc9847. No history rewrite or unrelatedstaging.",
+        "ts": "2026-10-09T07:05:16.871Z",
+        "host": "Owning Git checkout",
+        "kind": "observation",
+        "origin": "cephalon-receipt-explicit-staging-correction-20261009-timestamp-correction",
+        "owner": "codex"
+      },
+      "corrected-contextual-errors": [],
+      "corrected-context-free-errors": [
+        "missing required key: repo"
+      ]
+    }
+  ],
+  "recorded-at": "2026-10-09T07:05:16.871Z",
+  "after": {
+    "bytes": 15726,
+    "sha256": "7a6df216594bfda56bb686c2aa5f182f32e1cb5b24c477c8318beed2772fcd5e"
+  },
+  "root-comment": 4227491284,
+  "native-review-approval-claimed": false,
+  "before": {
+    "bytes": 14547,
+    "sha256": "7ac77bf15b89529fe4aea1a9bc0b63d526ff725d5ea93310ebda86e8c94e1306"
+  },
+  "head": "5133570de5877f13e76271b16f27a3b41360c613",
+  "review": 5466821408,
+  "whole-journal-pass-claimed": false,
+  "built-public-api-readback": {
+    "source": "existing released ESM artifact from exact513; production source unchanged",
+    "cases": 4,
+    "results": [
+      {
+        "line": 17,
+        "contextualOK": false,
+        "contextualErrors": [
+          "invalid ts: 2026-10-09T06:27:10.240339+00:00"
+        ],
+        "contextFreeErrors": [
+          "missing required key: repo",
+          "invalid ts: 2026-10-09T06:27:10.240339+00:00"
+        ]
+      },
+      {
+        "line": 18,
+        "contextualOK": false,
+        "contextualErrors": [
+          "invalid ts: 2026-10-09T06:27:53.724082+00:00"
+        ],
+        "contextFreeErrors": [
+          "missing required key: repo",
+          "invalid ts: 2026-10-09T06:27:53.724082+00:00"
+        ]
+      },
+      {
+        "line": 19,
+        "contextualOK": true,
+        "contextualErrors": [],
+        "contextFreeErrors": [
+          "missing required key: repo"
+        ]
+      },
+      {
+        "line": 20,
+        "contextualOK": true,
+        "contextualErrors": [],
+        "contextFreeErrors": [
+          "missing required key: repo"
+        ]
+      }
+    ],
+    "wholeJournalPassClaimed": false
+  }
+}

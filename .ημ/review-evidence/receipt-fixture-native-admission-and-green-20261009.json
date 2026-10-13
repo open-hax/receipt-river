@@ -1,0 +1,149 @@
+{
+  "schema": "codex.receipt-fixture-green/v1",
+  "observed_at": "2026-10-09T06:07:27.362194Z",
+  "tier": "actual local command output and authenticated native plan source; not hosted qualification or source approval",
+  "reviewed_plan": {
+    "head": "1aacfd374238718fddaeb1f557bfaece7514c847",
+    "base": "154440f3c997aa9208194bba59b5edbef3654f78",
+    "mimo_approved": 5466026271,
+    "coderabbit_full_request": 6075155948,
+    "coderabbit_full_completion": 6075157389,
+    "coderabbit_full_review": 5466224006,
+    "coderabbit_map_supplement": 6075235619,
+    "coderabbit_explicit_planning_approval": 6075302385,
+    "formal_coderabbit_approved": false,
+    "source_merge_gate_pass": false
+  },
+  "native_admission": {
+    "task": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "moves": [
+      "incoming -> breakdown",
+      "breakdown -> ready",
+      "ready -> in_progress"
+    ],
+    "actual_readback": "in_progress",
+    "cli_sha256": "1d941d3e3c6a5b0ffad71759c23e8b8c3ceb3ce4aef274c1f211a558f4efe463",
+    "old_event_prefix": {
+      "bytes": 4940,
+      "sha256": "cfdaad7f1390c412c4b95ce0110ab0ed956fb6d59784dff8afeb57213cf13945"
+    },
+    "prefix_preserved": true,
+    "other_cards_unchanged": true
+  },
+  "unchanged_full_suite_red": {
+    "proof": ".ημ/review-evidence/receipt-fixture-full-suite-red-20261009.json",
+    "test_exit": 1,
+    "cause": "compiled arity2 property TypeError",
+    "complete_suite_count": null
+  },
+  "repair": {
+    "file": "test/cljs/eta_mu/receipt_river/discovery_test.cljs",
+    "sha256": "a44f3e3ebfb8bae3cd5bcbaef6e13c0e726a3ff434fe340b30ba8f1756c8efe0",
+    "scope": "named arity2/arity3 test replacement; all original promise/counter/5ms/9repositories/3concurrencyassertions retained",
+    "production_sources_byte_identical": {
+      "src/cljs/eta_mu/receipt_river/api.cljs": "c027fff0ef9dcbb2b3fa7b2ab77bf9afd0b240a6e8304661fcb2e4be332a0812",
+      "src/cljs/eta_mu/receipt_river/archaeology/provider.cljs": "fc0df23a5d857ad95506b646d0b9f7c4d6c34f30aec6b0b0bba8e416c4e71a63",
+      "src/cljs/eta_mu/receipt_river/shape/edn.cljs": "0e06bef509eda4cf3aa63e53577d14b74e780563608aa52d6161ae296ceb3914",
+      "src/cljs/eta_mu/receipt_river/law/receipt.cljs": "a40dd843cf298926dfbe229d5544470dbd51682fd538e841a0fad62d29bed320",
+      "src/cljs/eta_mu/receipt_river/infra/local_git_provider.cljs": "aebdd62166f66c16877ab952095b85fb84e177141043981333ac82aa3ad0d251",
+      "src/cljs/eta_mu/receipt_river/infra/cli.cljs": "7642faa1097748df724b85d2ade3e5035be14f09334e04b6bd980c1355377ef1",
+      "src/cljs/eta_mu/receipt_river/extern/runtime.cljs": "75d863014e3d633fd9467cfd303d90d2326fc9dde0200da768252d19be24a888",
+      "src/cljs/eta_mu/receipt_river/extern/git.cljs": "12140ed090349f961ae4119b68a8750f2ff63c211531eed2396c1b8a35155852",
+      "src/cljs/eta_mu/receipt_river/extern/crypto.cljs": "5e852c2782c15b1f89e8157597272cf5965353c6cc31961929003d44932ea05b",
+      "src/cljs/eta_mu/receipt_river/extern/glob.cljs": "bd8c5ce5e36264271b4383e688ee44ff043f78c0912c98edb98d8f9623b0871d",
+      "src/cljs/eta_mu/receipt_river/extern/bus.cljs": "068f93ced2662e2493e5b6f42ce47b566b02b21eab225aab994b71de2e2a99fe",
+      "src/cljs/eta_mu/receipt_river/extern/fs.cljs": "1d6cc5136f40231c6926ef9f16602cd27361df15f80b0f60af78db196bcdf2cb",
+      "src/cljs/eta_mu/receipt_river/domain/discovery.cljs": "a70b60ec4bed9df4c0f026d1ce71e918e3055526eae5467a3de9c955b6a646df",
+      "src/cljs/eta_mu/receipt_river/domain/event.cljs": "bd284edccb1e355b19a6b356593a7daa2cb1f52055024f8efc4aca9d90762253",
+      "src/cljs/eta_mu/receipt_river/domain/receipt.cljs": "adc98967a40d80cde6f3fdf9e328a221986c3f16b8b1631e18e1f4fa78b10a35"
+    },
+    "compiled_file_sha256": "74c4e337dff632c8040769988de80ebba79fea9492fa506a99079bcf4542a61e",
+    "compiled_properties": [
+      "eta_mu$receipt_river$discovery_test$delayed_git.cljs$core$IFn$_invoke$arity$2 = eta_mu$receipt_river$discovery_test$delayed_git__2;",
+      "eta_mu$receipt_river$discovery_test$delayed_git.cljs$core$IFn$_invoke$arity$3 = eta_mu$receipt_river$discovery_test$delayed_git__3;"
+    ]
+  },
+  "gates": {
+    "test": {
+      "command": "pnpm test",
+      "exit": 0,
+      "tests": 25,
+      "assertions": 88,
+      "failures": 0,
+      "errors": 0,
+      "compiled_files": 2,
+      "files": 82,
+      "compiler_warnings": 0
+    },
+    "build": {
+      "command": "pnpm build",
+      "exit": 0,
+      "files": 59,
+      "compiled_files": 15,
+      "compiler_warnings": 0
+    },
+    "lint": {
+      "command": "pnpm lint:kondo",
+      "exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "extern_boundaries": "passed"
+    }
+  },
+  "logs": {
+    "fixture-owning-green-test.stdout": {
+      "bytes": 399,
+      "sha256": "9ca25eb5bff0a10df02cc762cb6560a049c0dd12bb8f9faa2a3802c4a1092359",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 test /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> shadow-cljs compile test && node target/receipt-river-test.cjs\n",
+        "\n",
+        "[:test] Compiling ...\n",
+        "[:test] Build completed. (82 files, 2 compiled, 0 warnings, 2.34s)\n",
+        "\n",
+        "Testing eta-mu.receipt-river.discovery-test\n",
+        "\n",
+        "Testing eta-mu.receipt-river.event-test\n",
+        "\n",
+        "Ran 25 tests containing 88 assertions.\n",
+        "0 failures, 0 errors.\n"
+      ]
+    },
+    "fixture-owning-green-test.stderr": {
+      "bytes": 279,
+      "sha256": "545f9f16b8817c04e399107eb1aea4ec3d7d727623bdd02909224886f29c1483",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n",
+        "shadow-cljs - config: /home/err/spaces/cephalon-receipt-attribution/receipt-river/shadow-cljs.edn\n",
+        "no \"source-map-support\" (run \"npm install source-map-support --save-dev\" to get it)\n"
+      ]
+    },
+    "fixture-owning-green-build.stdout": {
+      "bytes": 242,
+      "sha256": "37700b87f9a59cb5b803e23fc1d9beee9f9ab211c76cc6c3d1e8062f02a86bf7",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 build /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> shadow-cljs release receipt-river\n",
+        "\n",
+        "[:receipt-river] Compiling ...\n",
+        "[:receipt-river] Build completed. (59 files, 15 compiled, 0 warnings, 9.34s)\n"
+      ]
+    },
+    "fixture-owning-green-build.stderr": {
+      "bytes": 195,
+      "sha256": "90e9cd026b9ebc57e3ed54e0b05b3c15fc43c6b62aa0ceb4c4f13c21549b9118",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n",
+        "shadow-cljs - config: /home/err/spaces/cephalon-receipt-attribution/receipt-river/shadow-cljs.edn\n"
+      ]
+    }
+  },
+  "limits": [
+    "Actual pnpm local child Node22.18.0 differs from hosted22.20.0; fresh hosted source gates still required.",
+    "Missing NPM_TOKEN config notice and optional source-map-support notice are retained separately from zero compiler/lint warnings.",
+    "Compatibility behavior, receiver integration, physical field, mood and automatic graph recall remain unimplemented/unverified.",
+    "No native source approval, source merge, cardDone or deployment claimed."
+  ]
+}

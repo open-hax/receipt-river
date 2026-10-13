@@ -1,0 +1,354 @@
+{
+  "schema": "codex.receipt-context-compatibility-green/v1",
+  "observed_at": "2026-10-09T06:27:10.240339+00:00",
+  "tier": "actual owning local command output and native Rheos readback; not hosted source approval",
+  "implementation_parent": "ee4c7e3d85449b984d19443abed427328533bcad",
+  "reviewed_plan": {
+    "head": "1aacfd374238718fddaeb1f557bfaece7514c847",
+    "base": "154440f3c997aa9208194bba59b5edbef3654f78",
+    "mimo_formal_approved": 5466026271,
+    "coderabbit_explicit_conversational_planning_approval": 6075302385,
+    "formal_coderabbit_approved": false,
+    "source_qualification": false
+  },
+  "red": {
+    "proof": ".ημ/review-evidence/receipt-context-compatibility-red-20261009.json",
+    "tests": 32,
+    "assertions": 231,
+    "failures": 39,
+    "errors": 0,
+    "built_api_exit": 1
+  },
+  "green": {
+    "test": {
+      "command": "pnpm test",
+      "exit": 0,
+      "tests": 32,
+      "assertions": 231,
+      "failures": 0,
+      "errors": 0,
+      "files": 84,
+      "compiled": 8,
+      "compiler_warnings": 0
+    },
+    "build": {
+      "command": "pnpm build",
+      "exit": 0,
+      "files": 59,
+      "compiled": 3,
+      "compiler_warnings": 0
+    },
+    "built_public_api": {
+      "command": "pnpm test:public-api",
+      "exit": 0,
+      "cases": 15,
+      "original_fixture_unchanged": true
+    },
+    "lint": {
+      "command": "pnpm lint:kondo",
+      "exit": 0,
+      "errors": 0,
+      "warnings": 0,
+      "extern_boundary": "PASS"
+    },
+    "workflow_lint": {
+      "command": "actionlint .github/workflows/eta-mu-review.yml",
+      "exit": 0
+    },
+    "diff_hygiene": {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  },
+  "original_strict_law_block": {
+    "byte_identical": true,
+    "sha256": "fbb9b484351df9927adb8b6f529c4d5e0157d9c7d7e24001b0446f2182639bb0"
+  },
+  "frozen_receiver_suffix": {
+    "source": "riatzukiza/eta-mu@1c4c53a8af725322d9b6d508d4d165a3dc979685:receipts.edn",
+    "physical_lines": [
+      256,
+      257,
+      258
+    ],
+    "bytes": 10437,
+    "sha256": "592b8c95c84c82d3c9df8d4291e7aa768f3ebe9242aa6971e81be21550ad6cfa",
+    "no_historical_repo_or_schema_insertion": true
+  },
+  "native_card": {
+    "uuid": "4caf6f31-9e54-49e0-b6fc-34d2d8414ff0",
+    "status": "review",
+    "cli_sha256": "1d941d3e3c6a5b0ffad71759c23e8b8c3ceb3ce4aef274c1f211a558f4efe463",
+    "comment_exit": 0,
+    "initial_move_exit": 1,
+    "initial_move_reason": "missing --to; no transition occurred",
+    "corrected_move_exit": 0,
+    "other_cards_byte_identical": [
+      "docs/kanban/baseline-discovery-test-git-arity.md"
+    ]
+  },
+  "prefix_checks": {
+    ".ημ/receipts.edn": {
+      "committed_parent": "ee4c7e3d85449b984d19443abed427328533bcad",
+      "prefix_bytes": 43349,
+      "prefix_sha256": "69f16331dd38767e3abdc812aaabaef277d4d5d7af6754fb0f1ea3811e931a83",
+      "prefix_equal": true
+    },
+    ".ημ/session-mycology/ledger.md": {
+      "committed_parent": "ee4c7e3d85449b984d19443abed427328533bcad",
+      "prefix_bytes": 12543,
+      "prefix_sha256": "0b1ca77d55b967f2878608f34da718139111a38df41e98a6e19eacfcc53aa6e1",
+      "prefix_equal": true
+    },
+    "docs/kanban/.events/ledger.edn": {
+      "committed_parent": "ee4c7e3d85449b984d19443abed427328533bcad",
+      "prefix_bytes": 9157,
+      "prefix_sha256": "ff38022219c7286069abb2c3ccb1e5a4414f99684ee851ab361354cd9d80fb3c",
+      "prefix_equal": true
+    }
+  },
+  "files": {
+    ".github/workflows/eta-mu-review.yml": {
+      "bytes": 1506,
+      "sha256": "0d635dcc9e0b4e98f2e20212718cfc8b21d6bd0fd74159b302046bae911b7d37"
+    },
+    "README.md": {
+      "bytes": 2780,
+      "sha256": "2677afa455ed5d8fe7d033e6591070af78449de6a8b629010a78f1f0f9f649c4"
+    },
+    "package.json": {
+      "bytes": 915,
+      "sha256": "f55a800a654f7e21ea04c69487545c26baa6ed266fe2b0b02ff47b2bb98c57c8"
+    },
+    "src/cljs/eta_mu/receipt_river/api.cljs": {
+      "bytes": 2822,
+      "sha256": "38481efb05bb15533d0549f5339ba2a131eae5e8952abfaf8b133664363e41ad"
+    },
+    "src/cljs/eta_mu/receipt_river/infra/cli.cljs": {
+      "bytes": 10085,
+      "sha256": "9e6a94fd73e1d15ffb7a387e060e5e29a9841059298ec21ee3d2b4ac445b0241"
+    },
+    "src/cljs/eta_mu/receipt_river/law/receipt.cljc": {
+      "bytes": 6017,
+      "sha256": "4e1920ed0846025e91090f7fc33cd5bcb9be2c38d7892113fdb23648eeab2326"
+    },
+    "test/cljs/eta_mu/receipt_river/compatibility_test.cljs": {
+      "bytes": 7713,
+      "sha256": "22d19d74c273a869573d0853f55b151c535caca3fefa999c9f57bd91bd3b62cf"
+    },
+    "test/js/compatibility_public_api.mjs": {
+      "bytes": 3701,
+      "sha256": "70463de57ec73e2ef9a5e1fbea64b1fa864abf7ecd2af0b971d29affc66233bb"
+    },
+    "test/fixtures/receiver-repo-less-1c4c53.edn": {
+      "bytes": 10437,
+      "sha256": "592b8c95c84c82d3c9df8d4291e7aa768f3ebe9242aa6971e81be21550ad6cfa"
+    },
+    "docs/kanban/containing-repository-receipt-compatibility.md": {
+      "bytes": 12087,
+      "sha256": "8c5f311d074aae0225205edfb0dcc262d6753c8bf14977ac7a1610b20816d231"
+    },
+    "docs/kanban/.events/ledger.edn": {
+      "bytes": 11009,
+      "sha256": "af017fa8b2e4b92de4f8c09339d462817ae808bb5f75dacebf536131b1a90f1c"
+    }
+  },
+  "generated_cache_incident": {
+    "diagnostic": "Normal lint retained stale old .cljs one-arity namespace cache after portable .cljc rename; uncached source lint passed. Archived and removed only obsolete owning cache; unchanged normal command then passed.",
+    "archived_cache_bytes": 3594,
+    "archived_cache_sha256": "5d5e551f9b525e8c63424f95d789f76f3532050d6b964a23dd1db0201ec651dc",
+    "permanent_lint_flags_changed": false
+  },
+  "logs": {
+    "compatibility-owning-green-tests.stdout": {
+      "bytes": 474,
+      "sha256": "727d409a8af4c25f08f12bea4d2754d22d084b5f6a02b955eca790c5c03b38bf",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 test /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> shadow-cljs compile test && node target/receipt-river-test.cjs\n",
+        "\n",
+        "[:test] Compiling ...\n",
+        "[:test] Build completed. (84 files, 8 compiled, 0 warnings, 2.55s)\n",
+        "\n",
+        "Testing eta-mu.receipt-river.compatibility-test\n",
+        "receipts valid: 3 events\n",
+        "\n",
+        "Testing eta-mu.receipt-river.discovery-test\n",
+        "\n",
+        "Testing eta-mu.receipt-river.event-test\n",
+        "\n",
+        "Ran 32 tests containing 231 assertions.\n",
+        "0 failures, 0 errors.\n"
+      ]
+    },
+    "compatibility-owning-green-tests.stderr": {
+      "bytes": 279,
+      "sha256": "545f9f16b8817c04e399107eb1aea4ec3d7d727623bdd02909224886f29c1483",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n",
+        "shadow-cljs - config: /home/err/spaces/cephalon-receipt-attribution/receipt-river/shadow-cljs.edn\n",
+        "no \"source-map-support\" (run \"npm install source-map-support --save-dev\" to get it)\n"
+      ]
+    },
+    "compatibility-owning-green-build.stdout": {
+      "bytes": 241,
+      "sha256": "5b830c033000e89452f7031118d3338c955b9c6fc762678dad6ab4d43524b738",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 build /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> shadow-cljs release receipt-river\n",
+        "\n",
+        "[:receipt-river] Compiling ...\n",
+        "[:receipt-river] Build completed. (59 files, 3 compiled, 0 warnings, 7.12s)\n"
+      ]
+    },
+    "compatibility-owning-green-build.stderr": {
+      "bytes": 195,
+      "sha256": "90e9cd026b9ebc57e3ed54e0b05b3c15fc43c6b62aa0ceb4c4f13c21549b9118",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n",
+        "shadow-cljs - config: /home/err/spaces/cephalon-receipt-attribution/receipt-river/shadow-cljs.edn\n"
+      ]
+    },
+    "compatibility-owning-green-public-api.stdout": {
+      "bytes": 233,
+      "sha256": "d28518d4d26564a9e455f483e9bca5a192f907080cdc55b252feed11148aac6d",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 test:public-api /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> node test/js/compatibility_public_api.mjs\n",
+        "\n",
+        "Built public validateLine: 15 cases passed; original receiver fixture unchanged.\n"
+      ]
+    },
+    "compatibility-owning-green-public-api.stderr": {
+      "bytes": 97,
+      "sha256": "b1a73e8d61369efcbb995662dafac3cc34fddd603cedc2618c34c048491cf8e2",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n"
+      ]
+    },
+    "compatibility-owning-green-final-lint.stdout": {
+      "bytes": 293,
+      "sha256": "b76aec2022301a085473d1fe0d9f48811a601edfee64d2c74fab12f28f880ce3",
+      "utf8_physical_lines": [
+        "\n",
+        "> @eta-mu/receipt-river@0.1.0 lint:kondo /home/err/spaces/cephalon-receipt-attribution/receipt-river\n",
+        "> clj-kondo --lint src/cljs test/cljs && node scripts/check-ledger-extern-boundaries.mjs receipt-river\n",
+        "\n",
+        "linting took 160ms, errors: 0, warnings: 0\n",
+        "Extern boundary check passed: receipt-river\n"
+      ]
+    },
+    "compatibility-owning-green-final-lint.stderr": {
+      "bytes": 97,
+      "sha256": "b1a73e8d61369efcbb995662dafac3cc34fddd603cedc2618c34c048491cf8e2",
+      "utf8_physical_lines": [
+        " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n"
+      ]
+    },
+    "compatibility-owning-green-actionlint.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-owning-green-actionlint.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-owning-green-diff-hygiene.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-owning-green-diff-hygiene.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-native-green-comment.stdout": {
+      "bytes": 1084,
+      "sha256": "c9dffe6aa90a20e65e0721c5a13cb412b51500e41f3f23cc29429e9fe081bbcb",
+      "utf8_physical_lines": [
+        "{\n",
+        "  \"ok\": true,\n",
+        "  \"uuid\": \"4caf6f31-9e54-49e0-b6fc-34d2d8414ff0\",\n",
+        "  \"comment\": \"Actual owning local RED32tests231assertions39failures0errors and built public old API refusal retained in ee4c7e3. GREEN32/231zero and built public validateLine15casesPASS now implement the reviewed explicit string context -> closed pure map -> separately derived attribution path. Strict version1/explicit nil/other errors and original10437byte receiver suffix remain intact; original strict schema block byte-identical. Pure law moved to .cljc before API/CLI adapters. Normal lint0errors0warnings/externPASS and actionlint/diffPASS. The only retired own .cljs clj-kondo namespace cache was archived/removed after rename; no lint suppression. Local pnpm childNode22.18.0 differs from hosted22.20.0; fresh current source CI and native source reviews still owed. Fixture52341b2 unchanged, assertions preserved. No source merge/cardDone/receiver acceptance/B1B2B3 or deployment claim. Source evidence .ημ/review-evidence/receipt-context-compatibility-green-20261009.json follows this native readback.\"\n",
+        "}\n"
+      ]
+    },
+    "compatibility-native-green-comment.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-native-move-review.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-native-move-review.stderr": {
+      "bytes": 46,
+      "sha256": "82cf063974e83a16232b33771218a37237454dac95bb1f4106842e96ca3af9a1",
+      "utf8_physical_lines": [
+        "rheos: missing --to — try `rheos help move`\n"
+      ]
+    },
+    "compatibility-native-move-review-corrected.stdout": {
+      "bytes": 66,
+      "sha256": "c826f3059df39fdab040b3f5245e1d34d4b59b3fc121361c686dde11e1a551c1",
+      "utf8_physical_lines": [
+        "moved 4caf6f31-9e54-49e0-b6fc-34d2d8414ff0: in_progress -> review\n"
+      ]
+    },
+    "compatibility-native-move-review-corrected.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    },
+    "compatibility-native-review-readback.stdout": {
+      "bytes": 12631,
+      "sha256": "bb32874c17db827f2cb325b6bb5588f364acd5f34eff9da767358791ed440d85",
+      "utf8_physical_lines": [
+        "{\n",
+        "  \"uuid\": \"4caf6f31-9e54-49e0-b6fc-34d2d8414ff0\",\n",
+        "  \"frontmatter\": {\n",
+        "    \"uuid\": \"4caf6f31-9e54-49e0-b6fc-34d2d8414ff0\",\n",
+        "    \"title\": \"Read historical receipts in their containing repository context\",\n",
+        "    \"status\": \"review\",\n",
+        "    \"priority\": \"P1\",\n",
+        "    \"points\": \"3\",\n",
+        "    \"labels\": \"receipt-river, compatibility, cephalon\",\n",
+        "    \"write-id\": \"1791527149865-0.jzzxncwdi7o63fzu0o\"\n",
+        "  },\n",
+        "  \"sections\": [\n",
+        "    {\n",
+        "      \"type\": \"body\",\n",
+        "      \"content\": \"# Read historical receipts in their containing repository context\\n\\n## Context\\n\\nThe user directs: append a correction or leave old receipt bytes unchanged;\\nthe containing repository is the easiest place to imply attribution. Shared\\nreceiver PR8 retains three older records without `:repo`. Its current owning\\nReceipt River compatibility reader rejects those records as missing a required\\nkey, even though their file and checkout supply the repository context.\\nDo not rewrite them or ask again for rewrite permission.\\n\\nThis repository owns historical unversioned compatibility, repository discovery,\\nreceipt validation and the exported `validateLine` API. Main154440f3 currently\\nhas one-argument `record-errors` and two-argument `validate-line`; its strict\\nversion1 envelope also calls the legacy payload validator and publishes\\n`legacy-required-keys` as its schema required fields. Simply removing `:repo`\\nfrom that shared constant would weaken the declared schema contract.\\n\\n## Outcome\\n\\nLet the existing reader use an explicit containing-repository context to\\ninterpret a historical unversioned receipt that has no `:repo` field. Keep\\noriginal EDN bytes, parsed original record, source schema status and validation\\nerrors separately inspectable. Inferred attribution is derived reader context,\\nnever a field silently inserted into the historical receipt or a new attestation.\\n\\n## Scope\\n\\n- Add a small pure compatibility decision at the existing law boundary, with\\n  context-aware arities through the existing programmatic API. Keep the old\\n  arities' behavior unchanged when no containing context is available.\\n- Freeze the pure context as the closed CLJS map\\n  `{:repository/path \\\"<actual containing checkout path>\\\"}`: exactly that key,\\n  with a nonblank string value. The existing exported API gains\\n  `validateLine(line, lineNumber, containingRepositoryPath)` with a third\\n  **string** argument; the API edge constructs that pure map. A JS object is\\n  not implicitly converted into a CLJS map and remains an invalid context.\\n  Preserve the existing CLJS result representation; do not add a second API.\\n  The API edge owns checking that third argument is a nonblank string before\\n  constructing the map. Nil, blank and non-string arguments are refused as\\n  attribution input: construct no map and retain context-free validation/errors,\\n  without adding attribution or throwing a new protocol error. The pure law\\n  independently rejects malformed or extra-key context maps supplied directly.\\n- Context has a nonblank repository path supplied by an outer reader from its\\n  actual containing file/checkout. Document this as an attribution input, not\\n  authenticated repository identity, ancestry or ownership proof.\\n- Apply the exception only when the record is a map, has no `:event/schema`\\n  declaration and has no `:repo` key. An explicitly present nil value remains\\n  invalid; never replace an existing value with context. Retain all other\\n  existing kind, timestamp, required-field and parsing checks.\\n- Keep declared version1 payload requirements, registry/document bytes and new\\n  event construction strict. A versioned payload missing `:repo` is still\\n  refused even with containing context. No schema version is assigned to an\\n  unwrapped historical record.\\n- Expose derived containing attribution separately from unchanged `:event` and\\n  `:line`, with its basis and epistemic tier stated. Do not turn source context\\n  into validation success for another malformed field or into evidence approval.\\n- The context-aware result retains the exact context-free diagnostics at\\n  `:source/context-free-errors`, including the original missing-repo error;\\n  `:errors` contains effective compatibility errors in their original order.\\n  Only the specific permitted missing-repo error may disappear from the\\n  effective vector. When that exception is applied, separate attribution is\\n  `:source/repository {:path \\\"<supplied path>\\\" :basis :containing-repository\\n  :tier :derived}`. This attribution can coexist with remaining validation\\n  errors; it does not set `:ok` independently or attest receipt truth. No\\n  attribution is emitted when the exception does not apply. Context-free\\n  arities preserve their existing result and diagnostic behavior.\\n- Thread existing CLI repository discovery into its existing file-validation\\n  call. Consumer integration in eta-mu follows the qualified library source;\\n  the receiver must actually supply its ledger's containing checkout context.\\n  Passing the context-free old call must not acquire a hidden permissive default.\\n- Preserve existing newline/physical-line behavior. Absolute ordinal changes,\\n  `.ημ` path discovery improvements and archaeology changes are separate scope.\\n\\n## Non-goals\\n\\nHistorical receipt edits, new receipt CLI or validator outside Receipt River,\\nresult or approval promotion, schema-version retrofit, arbitrary metadata\\ncorrections, ignoring another finding, credential installation, paid reviews,\\nnew CI semantics, graph/mood/social implementation or runtime deployment.\\nThis is separate from Foresight PR28's four-field bound documentary envelope\\nview; do not mix the two reader contracts or transfer approvals between them.\\n\\n## Acceptance criteria\\n\\n1. A frozen real receiver suffix retains its three original physical lines\\n   byte-for-byte: 10437bytes/SHA256\\n   `592b8c95c84c82d3c9df8d4291e7aa768f3ebe9242aa6971e81be21550ad6cfa`,\\n   source PR8head1c4c53a8af725322d9b6d508d4d165a3dc979685, lines256-258.\\n   Each is still unversioned and contains no newly persisted `:repo` field.\\n2. With valid containing-repository path context, otherwise valid unversioned\\n   records missing `:repo` validate and disclose derived attribution separately.\\n   Raw line and parsed original equality are preserved. With no, nil, blank or\\n   wrong-shaped context they retain the existing missing-repo failure.\\n3. Existing explicit `:repo` values are not overwritten. A present nil value is\\n   still rejected; other existing legacy validation behavior is unchanged,\\n   including explicit non-nil values such as false. Do not tighten a separate\\n   historical field contract as part of this missing-field repair.\\n4. Missing timestamp/kind/owner and other required fields, unsupported kind,\\n   invalid timestamp and invalid EDN remain invalid with containing context.\\n5. Declared version1 envelopes with missing payload repo remain invalid under\\n   all context cases. Existing envelope schema documents/registry and component\\n   versioning behavior stay intact. Historical records acquire no schema.\\n   Presence of nil/malformed `:event/schema` still takes the declared-envelope\\n   route and cannot activate unversioned compatibility.\\n6. The built public API and existing CLI route exercise the same owning law.\\n   A context-aware receiver integration is required before its own native\\n   findings can settle; a library-local fixture pass is insufficient.\\n\\n## Verification\\n\\nPlanning is prospective, no behavioral tests or source repair yet. Read the\\nexisting `event_test.cljs` seams, `law/receipt.cljs`, `api.cljs`, `infra/cli.cljs`\\nand ESM exports. Retain real receiver original suffix and source identities when\\nRED is authored; test the public boundary, strict envelope refusal and explicit\\nnil/malformed-context negatives. Native Rheos Ready precedes failing laws/tests;\\nthen implement pure decision before adapters. Run owning `pnpm test`, `pnpm\\nbuild`, `pnpm lint:kondo` and diff hygiene with actual tool results visible.\\nThe current owning law was separately applied read-only to the exact retained\\nreceiver lines256-258: each has no repo/schema key and returns only\\n`missing required key: repo`. Initial wrong `.ημ/receipts.edn` source selection\\nwas refused; actual source is `receipts.edn`, and only the corrected immutable\\nread/hash check is verification. This is baseline diagnosis, not a new test or\\nrepair pass. Independent local planning assessment identified the two context\\nshape/diagnostic ambiguities above; its three-point estimate remains provisional\\nand supplies no native provider approval or readiness.\\n\\nReview-route preparation subsequently adds the pinned shared eta-mu caller,\\nforwarding the already installed publisher through encrypted Actions secrets.\\nIt runs the package's existing baseline commands; it introduces no compatibility\\nbehavior or new gate semantics. The nine-case real Git fixture verifies that\\nonly the two generated reviewer directories are ignored while tracked source,\\ntracked receipts and unrelated untracked paths remain visible. Actionlint\\npasses. Native hosted execution, complete-input review and convergence remain\\nseparate requirements; this preparation does not admit the card to Ready.\\n\\nAt the original planning head, this personal fork had no CI/review workflow or\\nGitHub Actions secret names. A missing MiMo execution surface is not a quota\\nexclusion or approval.\\nQualify a supported canonical review route and mandatory gates before claiming\\nplanning/code convergence; no fabricated provider identity or local waiver.\\nNo existing board configuration/cards were found, so this first manual incoming\\nMarkdown card is a proposal only. Installed Rheos admission is not claimed.\\n\\n## Risks\\n\\nA permissive default context could disguise a malformed new receipt. A caller\\ncould misattribute a file by passing a guessed path; document what is derived\\nand verify its actual file/checkout binding at the consumer. Shared legacy and\\nversion1 schema predicates must not accidentally weaken together. Consumer\\ncopies of donor source are not the canonical library repair; integration must\\npreserve reviewed source/provenance and actually pass the receiver's native gate.\\n\\n## Character goal relationship\\n\\nThis bounded prerequisite removes a provenance-reading obstruction for the\\nreviewed shared receiver used by the physical field work. It does not implement\\nor complete encounter -> physical graph/field -> separate persistent mood and\\nattention -> associative recall -> choice -> observed outcome -> memory, social\\nrelationships or character evolution. Do not replace that goal with receipts.\"\n",
+        "    },\n",
+        "    {\n",
+        "      \"type\": \"comment\",\n",
+        "      \"content\": \"Recorded newly discovered work for a later batch: baseline discovery-test crash, card7d593487-8163-41e4-97f2-63a9a4bb87fb. Actual hosted run37734293522/head35237a3aec20b2c07bf655f9fa1093a292d88a22/artifact11531365779 has test exit1 at Git exec_at arity2 property; complete test success is not established. Proposed fixture-call-shape cause remains unverified. Accepted fixed inventory requires the human scope choice before implementation; no test/source fix, skip or Ready. Exact generated clj-kondo cache hygiene is separate current review-route maintenance. Original receipt/reflection prefixes remain immutable. Source delivery remains blocked by the mandatory test; B1/B2/B3 character slice remains unimplemented.\\n***\\n\\n\\nActual owning local RED32tests231assertions39failures0errors and built public old API refusal retained in ee4c7e3. GREEN32/231zero and built public validateLine15casesPASS now implement the reviewed explicit string context -> closed pure map -> separately derived attribution path. Strict version1/explicit nil/other errors and original10437byte receiver suffix remain intact; original strict schema block byte-identical. Pure law moved to .cljc before API/CLI adapters. Normal lint0errors0warnings/externPASS and actionlint/diffPASS. The only retired own .cljs clj-kondo namespace cache was archived/removed after rename; no lint suppression. Local pnpm childNode22.18.0 differs from hosted22.20.0; fresh current source CI and native source reviews still owed. Fixture52341b2 unchanged, assertions preserved. No source merge/cardDone/receiver acceptance/B1B2B3 or deployment claim. Source evidence .ημ/review-evidence/receipt-context-compatibility-green-20261009.json follows this native readback.\"\n",
+        "    }\n",
+        "  ],\n",
+        "  \"source-path\": \"/home/err/spaces/cephalon-receipt-attribution/receipt-river/docs/kanban/containing-repository-receipt-compatibility.md\"\n",
+        "}\n"
+      ]
+    },
+    "compatibility-native-review-readback.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "utf8_physical_lines": []
+    }
+  },
+  "limits": [
+    "Local pnpm child Node22.18.0 differs from hosted22.20.0; fresh hosted full source gates remain required.",
+    "Test/build/public logs precede only map-literal indentation normalization in API; final lint, workflow lint and diff check follow that whitespace-only normalization.",
+    "Missing NPM_TOKEN config and optional source-map-support notices remain separate from zero compiler and lint warnings.",
+    "No source merge, cardDone or receiver integration acceptance; qualified source approval and consumer context integration remain owed.",
+    "B1/B2/B3, physical field, separate persisted mood and actual automatic graph recall remain incomplete.",
+    "No runtime, maker, PM2, gateway, clock, model, authorization grant, publication, cloud, deployment or heartbeat change."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "evidence_kind": "observed-native-artifact-and-operator-proof-summary",
+  "repository": "riatzukiza/receipt-river",
+  "run": 37734293522,
+  "artifact": 11531365779,
+  "zip_bytes": 30545,
+  "zip_sha256": "9edc17e0f28c9a34fe73865ec268605dd2421b6dfa5bd64a8e5709c2a171c296",
+  "producer_job": {
+    "id": 113170232750,
+    "conclusion": "success",
+    "qualification": "does not override deterministic failure"
+  },
+  "deterministic_summary": {
+    "schema": "open-hax.review-evidence/v2",
+    "repository": "riatzukiza/receipt-river",
+    "pull_request": 1,
+    "base_sha": "154440f3c997aa9208194bba59b5edbef3654f78",
+    "expected_head_sha": "35237a3aec20b2c07bf655f9fa1093a292d88a22",
+    "executed_sha": "35237a3aec20b2c07bf655f9fa1093a292d88a22",
+    "completion_sha": "35237a3aec20b2c07bf655f9fa1093a292d88a22",
+    "head_sha": "35237a3aec20b2c07bf655f9fa1093a292d88a22",
+    "exact_head": true,
+    "clean_checkout": false,
+    "generated_at": "2026-10-08T05:50:17.666Z",
+    "result": "failure",
+    "statuses": {
+      "diff_stat": 0,
+      "diff_hygiene": 0,
+      "install": 0,
+      "lint": 0,
+      "test": 1,
+      "build": 0
+    },
+    "attempted": {
+      "diff_stat": true,
+      "diff_hygiene": true,
+      "install": true,
+      "lint": true,
+      "test": true,
+      "build": true
+    },
+    "errors": [
+      "checkout was not clean across deterministic execution"
+    ],
+    "interpretation": "Exit 125 means the gate was skipped because a required prerequisite failed."
+  },
+  "native_artifact_file_hashes": {
+    "summary.json": {
+      "bytes": 989,
+      "sha256": "3a65bcad6ec6c210c533e8be985c7563df49f415ce4566971a1cf7397b161fef"
+    },
+    "statuses.env": {
+      "bytes": 59,
+      "sha256": "6a369a6932762c79a51cf9a9574b8f7a6f195caac50a40e76c345336b1715afa"
+    },
+    "completion-status.txt": {
+      "bytes": 1326,
+      "sha256": "45c6a20cfe11b05e306e88faa24451ea15221162f21bbe1db87f08cdec455c2d"
+    },
+    "deterministic.log": {
+      "bytes": 20239,
+      "sha256": "1bba71245d7545e286930d4f147c8b761754f196889ba657823cbd615e6087a3"
+    }
+  },
+  "cache_isolation_proof": {
+    "passed": 3,
+    "failed": 0,
+    "observations": [
+      {
+        "path": ".clj-kondo/.cache/v1/cljs/receipt.transit.json",
+        "expected": "ignored",
+        "actual": "ignored",
+        "status": ""
+      },
+      {
+        "path": ".clj-kondo/untracked-config.edn",
+        "expected": "untracked",
+        "actual": "untracked",
+        "status": "?? .clj-kondo/untracked-config.edn"
+      },
+      {
+        "path": ".clj-kondo/config.edn",
+        "expected": "tracked-modification",
+        "actual": "tracked-modification",
+        "status": "M .clj-kondo/config.edn"
+      }
+    ]
+  },
+  "native_later_batch_record": {
+    "uuid": "4caf6f31-9e54-49e0-b6fc-34d2d8414ff0",
+    "write_id": "1791438931184-0.1h5rhopl332wlvqkf8k",
+    "original_frontmatter_values_preserved": true,
+    "original_body_preserved": true,
+    "comment_exact": true,
+    "later_batch_card": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "event_ledger_path": "docs/kanban/.events/ledger.edn",
+    "event_ledger_bytes": 1128,
+    "event_ledger_sha256": "2f0960fbe6469cf543ba13f3d46a611e860bceece3748e6c8a5b0fb0fb4de8b2",
+    "events": 1
+  },
+  "baseline_repair_human_scope_choice": "pending",
+  "proposed_fixture_cause": "unverified",
+  "test_or_product_code_changed": false,
+  "cache_hygiene_hosted_repair_pass": "not yet observed",
+  "review_request_attempt": "canonical CLI refused duplicate with No request sent: pending; native automatic current-head CodeRabbit review already running",
+  "initial_native_content_attempt": "without --tasks-dir refused missing docs/agile/tasks/unknown task; corrected explicit docs/kanban native read/comment/readback succeeded",
+  "receipt_policy": "original lines retained; append new truthful correction only"
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "codex.receipt-fixture-full-suite-red/v1",
+  "tier": "Actual unmodified owning package test output and native hosted artifact; not a completed suite or provider approval.",
+  "local": {
+    "command": [
+      "pnpm",
+      "test"
+    ],
+    "started_at": "2026-10-09T04:48:42.072012+00:00",
+    "completed_at": "2026-10-09T04:49:03.555554+00:00",
+    "duration_ms": 21484,
+    "exit_code": 1,
+    "head": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "node": "v24.14.1",
+    "test_source_unchanged": true,
+    "log_bytes": 3125,
+    "log_sha256": "29d06eca6285aa5bbdf1575e630d7ffaf37d005e4582191a31b53233531acfb5"
+  },
+  "local_runtime_observation": {
+    "schema": "codex.execution-node-observation/v1",
+    "basis": "Actual completed pnpm test log, not launcher node probe",
+    "launcher_node_observed": "v24.14.1",
+    "actual_test_process_node_observed": "v22.18.0",
+    "raw_log_sha256": "29d06eca6285aa5bbdf1575e630d7ffaf37d005e4582191a31b53233531acfb5",
+    "original_metadata_preserved": true,
+    "suite_exit": 1,
+    "mechanism": "exec_at.cljs$core$IFn$_invoke$arity$2 is not a function",
+    "compiled_files": 82,
+    "compiled_warnings": 0,
+    "complete_suite_count_established": false
+  },
+  "local_log_utf8": " WARN  Issue while reading \"/home/err/.npmrc\". Failed to replace env in config: ${NPM_TOKEN}\n\n> @eta-mu/receipt-river@0.1.0 test /home/err/spaces/cephalon-receipt-attribution/receipt-river\n> shadow-cljs compile test && node target/receipt-river-test.cjs\n\nshadow-cljs - config: /home/err/spaces/cephalon-receipt-attribution/receipt-river/shadow-cljs.edn\nshadow-cljs - updating dependencies\nshadow-cljs - dependencies updated\n[:test] Compiling ...\n[:test] Build completed. (82 files, 81 compiled, 0 warnings, 8.79s)\nno \"source-map-support\" (run \"npm install source-map-support --save-dev\" to get it)\n\nTesting eta-mu.receipt-river.discovery-test\n/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:137\nvar map__7903 = (await eta_mu.receipt_river.extern.git.exec_at.cljs$core$IFn$_invoke$arity$2(path,args));\n                                                               ^\n\nTypeError: eta_mu.receipt_river.extern.git.exec_at.cljs$core$IFn$_invoke$arity$2 is not a function\n    at Object.eta_mu$receipt_river$infra$local_git_provider$git_value [as git_value] (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:137:64)\n    at eta_mu$receipt_river$infra$local_git_provider$enrich (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:150:199)\n    at /home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:19659:135\n    at /home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8367:96\n    at Function.cljs$core$IFn$_invoke$arity$3 (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8368:3)\n    at Object.cljs$core$IReduce$_reduce$arity$3 (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:11992:29)\n    at Function.cljs$core$IFn$_invoke$arity$3 (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:8521:13)\n    at Function.cljs$core$IFn$_invoke$arity$2 (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/cljs.core.js:19658:52)\n    at Object.eta_mu$receipt_river$infra$local_git_provider$enrich_candidates [as enrich_candidates] (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:201:136)\n    at Object.eta_mu$receipt_river$infra$local_git_provider$discover_STAR_ [as discover_STAR_] (/home/err/spaces/cephalon-receipt-attribution/receipt-river/.shadow-cljs/builds/test/dev/out/cljs-runtime/eta_mu.receipt_river.infra.local_git_provider.js:221:70)\n\nNode.js v22.18.0\n ELIFECYCLE  Test failed. See above for more details.\n",
+  "hosted": {
+    "schema": "open-hax.review-evidence/v2",
+    "repository": "riatzukiza/receipt-river",
+    "pull_request": 1,
+    "base_sha": "154440f3c997aa9208194bba59b5edbef3654f78",
+    "expected_head_sha": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "executed_sha": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "completion_sha": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "head_sha": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "exact_head": true,
+    "clean_checkout": true,
+    "generated_at": "2026-10-09T04:47:50.752Z",
+    "result": "failure",
+    "statuses": {
+      "diff_stat": 0,
+      "diff_hygiene": 0,
+      "install": 0,
+      "lint": 0,
+      "test": 1,
+      "build": 0
+    },
+    "attempted": {
+      "diff_stat": true,
+      "diff_hygiene": true,
+      "install": true,
+      "lint": true,
+      "test": true,
+      "build": true
+    },
+    "errors": [],
+    "interpretation": "Exit 125 means the gate was skipped because a required prerequisite failed."
+  },
+  "native_artifact": {
+    "id": 11596136859,
+    "bytes": 72855,
+    "digest": "sha256:42d36cd8659103fb3c9107c77d68a28109472497b3f899dd0de882131bde752e"
+  },
+  "native_review": {
+    "id": 5465816750,
+    "state": "COMMENTED",
+    "head": "bea87552a3a70e782d488b5cdb3baf1c9e434c24",
+    "findings": [
+      "threadPRRT_kwDOU4Vgrc6qpgxq/comment4226708752 Markdown separator",
+      "cr-comment:v1:1c3a5047d1c28784cafdc991 compiled arity acceptance"
+    ]
+  },
+  "preserved_scope": "Original concurrency assertions, Promise delay and production Git/discovery remain unchanged. Only planning text fixed at this point."
+}

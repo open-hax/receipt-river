@@ -1,0 +1,90 @@
+{
+  "tier": "observed",
+  "evidence_kind": "observed-command-output transcription; not native providerapproval",
+  "red_commit": "86feb2c180631bba190aaf72a55e9fc0535fb609",
+  "receiver_finding": {
+    "review": 5467402440,
+    "comment": 4227957554,
+    "thread": "PRRT_kwDOU4VdxM6qsijM",
+    "head": "7ccf3ba5303e94b1d20f5113be26d84194db11e2"
+  },
+  "gates": {
+    "test": {
+      "command": [
+        "node",
+        "/home/err/.cache/node/corepack/v1/pnpm/10.14.0/bin/pnpm.cjs",
+        "test"
+      ],
+      "node": "v22.20.0",
+      "exit": 0,
+      "elapsedSeconds": 6.4823966049880255,
+      "logBytes": 893,
+      "logSHA256": "4dda0a4f9376b233f41b9be79c6d61697a56363844ce73b2866cb24f2a275ae7"
+    },
+    "lint": {
+      "command": [
+        "node",
+        "/home/err/.cache/node/corepack/v1/pnpm/10.14.0/bin/pnpm.cjs",
+        "lint:kondo"
+      ],
+      "node": "v22.20.0",
+      "exit": 0,
+      "elapsedSeconds": 0.43758299099863507,
+      "logBytes": 390,
+      "logSHA256": "e45bc021fd30e67de060542c66301ed930b3a5c180488d855af7a0566f5a8e46"
+    },
+    "build": {
+      "command": [
+        "node",
+        "/home/err/.cache/node/corepack/v1/pnpm/10.14.0/bin/pnpm.cjs",
+        "build"
+      ],
+      "node": "v22.20.0",
+      "exit": 0,
+      "elapsedSeconds": 11.1677492329909,
+      "logBytes": 436,
+      "logSHA256": "fc43373dcbfa2dbf386fc9abb0b62dafe09db6cfc5dfafaf9e7d8e6a7f3420f2"
+    },
+    "public": {
+      "command": [
+        "node",
+        "/home/err/.cache/node/corepack/v1/pnpm/10.14.0/bin/pnpm.cjs",
+        "test:public-api"
+      ],
+      "node": "v22.20.0",
+      "exit": 0,
+      "elapsedSeconds": 0.3219973820087034,
+      "logBytes": 330,
+      "logSHA256": "aca8b99e441a8aeeadec9cfe135185c6460f032d74bb6f5f14b64383fdf6adad"
+    }
+  },
+  "actual_suite": {
+    "tests": 33,
+    "assertions": 251,
+    "failures": 0,
+    "errors": 0,
+    "compiler_warnings": 0,
+    "released_public_cases": 15
+  },
+  "unchanged_source_inputs": {
+    "src/cljs/eta_mu/receipt_river/api.cljs": {
+      "bytes": 2822,
+      "sha256": "38481efb05bb15533d0549f5339ba2a131eae5e8952abfaf8b133664363e41ad"
+    },
+    "src/cljs/eta_mu/receipt_river/law/receipt.cljc": {
+      "bytes": 6017,
+      "sha256": "4e1920ed0846025e91090f7fc33cd5bcb9be2c38d7892113fdb23648eeab2326"
+    },
+    "test/fixtures/receiver-repo-less-1c4c53.edn": {
+      "bytes": 10437,
+      "sha256": "592b8c95c84c82d3c9df8d4291e7aa768f3ebe9242aa6971e81be21550ad6cfa"
+    }
+  },
+  "cli_sha256": "56fa6e0b8c83f337b673a0debdfdbb741ef9c00b9e378d41612a945d0dd67b0b",
+  "semantics": "Successful realGit root supplies context; failedGit uses cwd solely for file routing andnilcontext, originalmissingrepo errors/exit1 preserved. API/law strictcontracts unchanged. Existing status/tail/append directoryfallback preserved.",
+  "native_card": "Review via nativecomment/status-update/readback afteractualGREEN; fixtureDoneunchanged; actualreceiverqualification owed",
+  "new_receipt22_valid_under_released_reader": true,
+  "initial_iterator_readback_error_not_production_failure": "for-of of CLJS keys iterator threwTypeError; corrected existing keys.next lookup independentlyvalidatednewrow22",
+  "old_receipts_rewritten": false,
+  "consumer_qualification_or_character_completion": false
+}

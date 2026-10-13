@@ -1,0 +1,62 @@
+{
+  "tier": "observed",
+  "evidence_kind": "observed-command-output transcription; not native provider approval",
+  "source_head": "4525f0dd3d8e86c55bcb5d195ab3aaba8d50d708",
+  "upstream_source_merge": "5eeb77e035c17160416d0a092415b39b3de55133",
+  "receiver_finding": {
+    "review": 5467402440,
+    "comment": 4227957554,
+    "thread": "PRRT_kwDOU4VdxM6qsijM",
+    "head": "7ccf3ba5303e94b1d20f5113be26d84194db11e2",
+    "url": "https://github.com/riatzukiza/eta-mu/pull/8#discussion_r4227957554"
+  },
+  "actual_red": {
+    "command": [
+      "node",
+      "/home/err/.cache/node/corepack/v1/pnpm/10.14.0/bin/pnpm.cjs",
+      "test"
+    ],
+    "cwd": "/home/err/spaces/cephalon-receipt-attribution/receipt-river",
+    "node": "v22.20.0",
+    "startedAt": "2026-10-09T08:07:23.917389+00:00",
+    "elapsedSeconds": 7.111869412998203,
+    "exit": 1,
+    "logBytes": 3186,
+    "logSHA256": "a25e00ec36c145f9df6ca4428e0dc42b10a956c1db7d26e123181d9294d9ff90"
+  },
+  "assertions": {
+    "tests": 33,
+    "assertions": 251,
+    "failures": 11,
+    "errors": 0,
+    "compiler_warnings": 0,
+    "real_git_resolution_failed": true,
+    "fallback_false_attribution_and_exit0_reproduced": true,
+    "raw_fixture_preserved": true,
+    "owned_temporary_directory_cleaned": true
+  },
+  "setup_attempt_not_red": {
+    "command": [
+      "pnpm",
+      "test"
+    ],
+    "cwd": "/home/err/spaces/cephalon-receipt-attribution/receipt-river",
+    "node": "v22.20.0",
+    "head": "4525f0dd3d8e86c55bcb5d195ab3aaba8d50d708",
+    "startedAt": "2026-10-09T08:06:44.659917+00:00",
+    "elapsedSeconds": 0.9262327530013863,
+    "exit": 1,
+    "logBytes": 1408,
+    "logSHA256": "092565a8a883c73cb44f5fcb3cc282e161312defa950452a8feedea129308b2e"
+  },
+  "native_scope": {
+    "card": "4caf6f31-9e54-49e0-b6fc-34d2d8414ff0",
+    "comment_and_review_to_in_progress_actual": true,
+    "initial_misplaced_flags_returned_help_only": true,
+    "event_prefix_bytes": 13460,
+    "prefix_sha256": "653c65f5e8047429b9b1869e5875c8613ec7f2cb765cfdb71d91fd3390a394a6",
+    "prefix_preserved": true
+  },
+  "production_changed": false,
+  "milestone_complete": false
+}

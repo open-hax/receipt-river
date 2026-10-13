@@ -1,0 +1,136 @@
+{
+  "evidence_kind": "observed-operator-output-summary",
+  "repository": "riatzukiza/receipt-river",
+  "prior_head": "c761bf0cc7a0fac2df09282a9eff6d2169ca14ca",
+  "base": "154440f3c997aa9208194bba59b5edbef3654f78",
+  "shared_receiver_revision": "45ec644c2d15ed511e9bc1e797d1b4073b63dbfc",
+  "canonical_skill_revision": "4b4f48dae1b804b2581974e604cca618ecedadf1",
+  "installed_skill_files_compared": 39,
+  "installed_skill_byte_mismatches": 0,
+  "actionlint_exit": 0,
+  "publisher": {
+    "kind": "observed-operator-metadata",
+    "repository": "riatzukiza/receipt-river",
+    "app": {
+      "id": 3152464,
+      "slug": "eta-mu-ai"
+    },
+    "installation": {
+      "id": 118318185,
+      "account": "riatzukiza",
+      "repository_selection": "all",
+      "suspended": false
+    },
+    "secrets": [
+      {
+        "name": "ETA_MU_APP_ID",
+        "updatedAt": "2026-10-08T05:45:45Z"
+      },
+      {
+        "name": "ETA_MU_APP_PRIVATE_KEY",
+        "updatedAt": "2026-10-08T05:45:45Z"
+      }
+    ],
+    "new_app_or_installation": false,
+    "secret_contents_recorded": false,
+    "hosted_execution_verified": false
+  },
+  "generated_ignore_proof": {
+    "kind": "observed-real-git-fixture",
+    "passed": 9,
+    "failed": 0,
+    "ignore_file_sha256": "df900aa1bf5e183e847173a1eb722e0c35ee1e288aa5876857c63954e7631c01",
+    "core_quote_path": "Git default",
+    "observations": [
+      {
+        "path": ".review-context/.ημ/review-input.json",
+        "expected": "ignored",
+        "observed": "ignored",
+        "status": ""
+      },
+      {
+        "path": ".opencode/review-evidence/η.json",
+        "expected": "ignored",
+        "observed": "ignored",
+        "status": ""
+      },
+      {
+        "path": "outside-η.txt",
+        "expected": "untracked",
+        "observed": "untracked",
+        "status": "?? \"outside-\\316\\267.txt\""
+      },
+      {
+        "path": ".review-context-neighbor/η.json",
+        "expected": "untracked",
+        "observed": "untracked",
+        "status": "?? \".review-context-neighbor/\\316\\267.json\""
+      },
+      {
+        "path": ".opencode/neighbor/η.json",
+        "expected": "untracked",
+        "observed": "untracked",
+        "status": "?? \".opencode/neighbor/\\316\\267.json\""
+      },
+      {
+        "path": ".ημ/new-receipt.edn",
+        "expected": "untracked",
+        "observed": "untracked",
+        "status": "?? \".\\316\\267\\316\\274/new-receipt.edn\""
+      },
+      {
+        "path": "src/cljs/owned.cljs",
+        "expected": "tracked-modification",
+        "observed": "tracked-modification",
+        "status": "M src/cljs/owned.cljs"
+      },
+      {
+        "path": ".ημ/receipts.edn",
+        "expected": "tracked-modification",
+        "observed": "tracked-modification",
+        "status": "M \".\\316\\267\\316\\274/receipts.edn\""
+      },
+      {
+        "path": ".review-context/tracked-η.json",
+        "expected": "tracked-modification",
+        "observed": "tracked-modification",
+        "status": "M \".review-context/tracked-\\316\\267.json\""
+      }
+    ],
+    "shared_receiver_repair_or_settlement": false
+  },
+  "historical_prefixes": {
+    ".ημ/receipts.edn": {
+      "bytes": 5076,
+      "sha256": "477cf160956dadd56b4105bc323b7b1bd16ed5428bfc2bc33b77958779d36c58"
+    },
+    ".ημ/session-mycology/ledger.md": {
+      "bytes": 1891,
+      "sha256": "3238dc691bb1de4a4e1e86e2ab29dcfb4214938c1484bfedf6c8fe97e3012a78"
+    }
+  },
+  "baseline_package_gates": "not executed locally; configured hosted execution not yet observed",
+  "approval_or_ready_credit": false,
+  "compatibility_source_changed": false,
+  "runtime_changed": false,
+  "automation": "PAUSED",
+  "package_lockfile": "absent; existing unlocked dependency policy preserved",
+  "operator_read_limits": [
+    "An initial full git diff against the installed skill repository index reported staged deletion state and produced truncated diagnostic output. No index or file mutation was performed; separate immutable-source-to-installed-file comparison passed all39files.",
+    "One probe used an unknown completed process ID and returned no process output; it supplies no execution evidence."
+  ],
+  "prepared_files": {
+    ".github/workflows/eta-mu-review.yml": {
+      "bytes": 1472,
+      "sha256": "c8d6ca33e2dfd031ed6703bcd76484e551b38c879a3cd9e55e8fce73d32d410d"
+    },
+    ".gitignore": {
+      "bytes": 209,
+      "sha256": "df900aa1bf5e183e847173a1eb722e0c35ee1e288aa5876857c63954e7631c01"
+    },
+    "docs/verification/canonical-review-route.md": {
+      "bytes": 3254,
+      "sha256": "99fe17effe6c87202022d5acbfeaac5b5b045d7eec40e4178a7e07c26caa0142"
+    }
+  }
+}

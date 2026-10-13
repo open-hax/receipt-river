@@ -1,0 +1,79 @@
+{
+  "schema": "codex.receipt-fixture-scope-authorization/v1",
+  "observed_at": "2026-10-09T04:45:42.022343+00:00",
+  "tier": "Human scope authorization and actual native Rheos readback; prospective repair, not provider approval or full-suite pass.",
+  "question_call": "call_968cb17bde984e0c879e6619f31c3d18",
+  "human_answer": "Include the minimal fixture repair",
+  "milestone": "Cephalon B1/B2/B3; one-point prerequisite addition",
+  "source_head": "6370ff968841115e681e2b21d80277fd0f0a0289",
+  "cli_sha256": "1d941d3e3c6a5b0ffad71759c23e8b8c3ceb3ce4aef274c1f211a558f4efe463",
+  "read_command": [
+    "node",
+    "/home/err/spaces/cephalon-rheos-relationships/source-preserving/dist/cli.cjs",
+    "read-task",
+    "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "--tasks-dir",
+    "/home/err/spaces/cephalon-receipt-attribution/receipt-river/docs/kanban"
+  ],
+  "native_readback": {
+    "uuid": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "frontmatter": {
+      "uuid": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+      "title": "Restore the compiled discovery test's Git boundary fixture",
+      "status": "incoming",
+      "priority": "P1",
+      "points": "1",
+      "labels": "receipt-river, tests, later-batch",
+      "write-id": "1791521081950-0.uruw8jjijtlml2ax8h"
+    },
+    "sections": [
+      {
+        "type": "body",
+        "content": "# Restore the compiled discovery test's Git boundary fixture\n\n## Context\n\nFirst hosted run37734293522 on exact35237a3aec20b2c07bf655f9fa1093a292d88a22\ncompiled the existing test target, then discovery-test crashed with an arity2\nproperty TypeError at the existing Git boundary call. Actual deterministic\nartifact11531365779 retains test exit1. Neither producer SUCCESS nor build and\nlint passes makes the test suite pass.\n\nThis newly discovered work is recorded for a later batch under the accepted\nfinite-inventory discipline. It is not admitted to the current milestone without\nthe human's scope decision. The existing containing-repository plan\n4caf6f31-9e54-49e0-b6fc-34d2d8414ff0 remains blocked by the mandatory test result.\n\n## Outcome\n\nRun the complete existing compiled test suite without this fixture crash and\nretain the bounded-concurrency assertions at their original semantic strength.\nThe one-point estimate is provisional until independent planning review.\n\n## Scope\n\nIdentify the actual failing existing `with-redefs` seam and reproduce the\ncompiled Node22.20.0 call. The production `git/exec-at` is a multi-arity function;\nthe current delayed test replacement is a single-arity function. Compiled calls\nto the original var may use its arity property. Verify this proposed cause\nbefore repairing the replacement's shape. Keep production discovery, Git timeout,\nidentity and repository attribution semantics unchanged.\n\n## Non-goals\n\nReceipt compatibility implementation, historical receipt rewrites, unrelated\ntest suppression, narrowed namespace selection, compiler or package policy\nmigration, optional-test classification, runtime changes and character features.\n\n## Acceptance criteria\n\n1. The retained old-head hosted output remains inspectable as a real failure;\n   its incomplete suite is never relabeled as successful tests.\n2. A targeted reproduction establishes the causal fixture/call-shape mismatch,\n   or records a different verified cause before any repair.\n3. The existing complete `pnpm test` passes with its bounded-concurrency test\n   and all original assertions still executed; no skip or selection workaround.\n4. Existing build, lint and exact-clean-head hosted gates pass on the actual\n   candidate. Publish complete review input and retain native review and gate\n   evidence before qualification.\n\n## Verification\n\nScope acceptance, qualified planning review and native Rheos admission precede\nrepair. Preserve the old compiled failure, test and Git-boundary source hashes,\nthen demonstrate failure before the minimal fixture change and success after it.\nRun owning package commands, not a substitute local validator or smaller suite.\n\n## Risks\n\nThe observed error identifies a call seam, not yet a proven root cause. Avoid\nchanging production behavior to accommodate an incorrectly shaped test double.\nUnlocked dependency resolution is a separate observed limit; one successful\nrun would not prove all future dependency versions work."
+      },
+      {
+        "type": "comment",
+        "content": "Causal diagnostic follow-up 2026-10-08: actual current hosted artifact11531594218 (ZIP SHA2566232419d824870cd9eb053ba77035cd32e41ff21e3b278e664fb7f1b284dc7c1) binds head6370ff968841115e681e2b21d80277fd0f0a0289/base154440f3c997aa9208194bba59b5edbef3654f78, exact/clean, all6gates attempted, test exit1. Its Node22.20.0 stack calls exec_at.cljs$core$IFn$_invoke$arity$2 and reports that property is not a function. The source call, two/three-arity production function and single-arity delayed-git replacement are byte-identical between this head, base and working tree; Git history retains the fixture since initial extraction7c7c62343fea0241ac545e37f14e57ab344bfa30. No prior passing baseline was established. A bounded separately compiled representation probe using existing cached ClojureScript1.12.145/static-fns true/optimizations none on localNode24.14.1 reproduced the same missing-arity-property TypeError with the single-arity replacement; original control and restoration succeed, zero production Git processes. This proves the proposed call-shape mechanism, not the complete owning test, exact hosted environment or a repaired suite. Preserve production timeout/concurrency semantics and original full-suite assertions when a qualified fixture repair is admitted. Proof .ημ/review-evidence/receipt-discovery-arity-causal-diagnostic-20261008.json SHA2568f638d09281c643609c3e1eae3018c3daf0244b82822f0a54e1f22e6ef3020c2. The first private launch used a wrong generated-bootstrap cwd and failed MODULE_NOT_FOUND; retained unchanged output ran correctly from /, not production verification. Free space15,985,807,360bytes is below20GiB; reused existing compiler/classpath only, no full checkout or dependency install. Scope choice remains pending; this card staysIncoming, no owning test/source patch, new estimate, Ready, compatibility implementation, skipped test, provider retry or character runtime change.\n\nScope authorization 2026-10-09 UTC: the human explicitly answered Include the minimal fixture repair to native question call_968cb17bde984e0c879e6619f31c3d18 in the Cephalon character-design chat. This adds only this one-point baseline test-double prerequisite to the accepted B1/B2/B3 milestone; the earlier pending-scope observations remain historical bytes. The retained causal diagnostic 8f638d09281c643609c3e1eae3018c3daf0244b82822f0a54e1f22e6ef3020c2 proves the compiled single-arity replacement mismatch. Proposed repair is a named two/three-arity delayed test function retaining the same promise, 5ms delay, nine repositories, and all three existing bounded-concurrency assertions. No production Git/discovery/timeout/attribution behavior changes. Complete planning review and native Ready precede repair; then execute unchanged full-suite RED, minimal fixture GREEN, all owning build/lint/test and exact hosted gates, current-input code review and guarded MERGE. This does not complete character encounter, mood or automatic recall and does not resume the paused heartbeat."
+      }
+    ],
+    "source-path": "/home/err/spaces/cephalon-receipt-attribution/receipt-river/docs/kanban/baseline-discovery-test-git-arity.md"
+  },
+  "unchanged_sources": {
+    "src/cljs/eta_mu/receipt_river/extern/git.cljs": {
+      "bytes": 2587,
+      "sha256": "12140ed090349f961ae4119b68a8750f2ff63c211531eed2396c1b8a35155852",
+      "equal_head": true
+    },
+    "src/cljs/eta_mu/receipt_river/infra/local_git_provider.cljs": {
+      "bytes": 6197,
+      "sha256": "aebdd62166f66c16877ab952095b85fb84e177141043981333ac82aa3ad0d251",
+      "equal_head": true
+    },
+    "test/cljs/eta_mu/receipt_river/discovery_test.cljs": {
+      "bytes": 17066,
+      "sha256": "cd949821285ac3fa016fff53cc2c02b942949c5c69afa576419f3fbfdcd9e065",
+      "equal_head": true
+    },
+    "package.json": {
+      "bytes": 847,
+      "sha256": "cbad4b9e395ca11d33906f05b97503bbfb2de6cd5ad4ea544f2456f38ecc1b6d",
+      "equal_head": true
+    },
+    "shadow-cljs.edn": {
+      "bytes": 834,
+      "sha256": "057744577807cb61743ebf81387e77da66073b6cfc0dc41ba9216dcd25cd1918",
+      "equal_head": true
+    }
+  },
+  "prior_head_ledger_prefixes_equal": true,
+  "planned_change": "Named two/three-arity delayed test double; same delay, promise body, nine repositories and all three existing concurrency assertions. Production behavior unchanged.",
+  "remaining": [
+    "planning review",
+    "native Ready",
+    "complete owning suite RED then GREEN",
+    "full owning and exact hosted gates",
+    "current input code review and guarded MERGE"
+  ],
+  "runtime_changed": false,
+  "heartbeat": "PAUSED"
+}

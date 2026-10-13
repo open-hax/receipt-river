@@ -7,3 +7,10 @@ target/
 .lsp/
 *.log
 .env
+
+# Generated inputs from the pinned shared reviewer; tracked changes stay visible.
+/.opencode/review-evidence/
+/.review-context/
+
+# Generated lint cache; lint configuration and source remain review inputs.
+/.clj-kondo/.cache/

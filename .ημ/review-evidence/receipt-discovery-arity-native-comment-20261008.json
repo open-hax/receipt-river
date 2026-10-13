@@ -1,0 +1,35 @@
+{
+  "observed_at": "2026-10-08T23:07:15.873537Z",
+  "writer_sha256": "76251ae169560fb43a2239998ac117297c7f4f208874fe06b8d1463d3f692f3c",
+  "source_qualification": "personal Rheos9 exactf0/merge858 source; no installed package/release claim",
+  "command_exit": 0,
+  "readback_exit": 0,
+  "uuid": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+  "frontmatter_semantics_preserved_except_native_write_id": true,
+  "original_body_equal": true,
+  "exact_comment_readback": true,
+  "status": "incoming",
+  "readback": {
+    "uuid": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+    "frontmatter": {
+      "uuid": "7d593487-8163-41e4-97f2-63a9a4bb87fb",
+      "title": "Restore the compiled discovery test's Git boundary fixture",
+      "status": "incoming",
+      "priority": "P1",
+      "points": "1",
+      "labels": "receipt-river, tests, later-batch",
+      "write-id": "1791500835597-0.yww1lyknxq9d3s64ydz"
+    },
+    "sections": [
+      {
+        "type": "body",
+        "content": "# Restore the compiled discovery test's Git boundary fixture\n\n## Context\n\nFirst hosted run37734293522 on exact35237a3aec20b2c07bf655f9fa1093a292d88a22\ncompiled the existing test target, then discovery-test crashed with an arity2\nproperty TypeError at the existing Git boundary call. Actual deterministic\nartifact11531365779 retains test exit1. Neither producer SUCCESS nor build and\nlint passes makes the test suite pass.\n\nThis newly discovered work is recorded for a later batch under the accepted\nfinite-inventory discipline. It is not admitted to the current milestone without\nthe human's scope decision. The existing containing-repository plan\n4caf6f31-9e54-49e0-b6fc-34d2d8414ff0 remains blocked by the mandatory test result.\n\n## Outcome\n\nRun the complete existing compiled test suite without this fixture crash and\nretain the bounded-concurrency assertions at their original semantic strength.\nThe one-point estimate is provisional until independent planning review.\n\n## Scope\n\nIdentify the actual failing existing `with-redefs` seam and reproduce the\ncompiled Node22.20.0 call. The production `git/exec-at` is a multi-arity function;\nthe current delayed test replacement is a single-arity function. Compiled calls\nto the original var may use its arity property. Verify this proposed cause\nbefore repairing the replacement's shape. Keep production discovery, Git timeout,\nidentity and repository attribution semantics unchanged.\n\n## Non-goals\n\nReceipt compatibility implementation, historical receipt rewrites, unrelated\ntest suppression, narrowed namespace selection, compiler or package policy\nmigration, optional-test classification, runtime changes and character features.\n\n## Acceptance criteria\n\n1. The retained old-head hosted output remains inspectable as a real failure;\n   its incomplete suite is never relabeled as successful tests.\n2. A targeted reproduction establishes the causal fixture/call-shape mismatch,\n   or records a different verified cause before any repair.\n3. The existing complete `pnpm test` passes with its bounded-concurrency test\n   and all original assertions still executed; no skip or selection workaround.\n4. Existing build, lint and exact-clean-head hosted gates pass on the actual\n   candidate. Publish complete review input and retain native review and gate\n   evidence before qualification.\n\n## Verification\n\nScope acceptance, qualified planning review and native Rheos admission precede\nrepair. Preserve the old compiled failure, test and Git-boundary source hashes,\nthen demonstrate failure before the minimal fixture change and success after it.\nRun owning package commands, not a substitute local validator or smaller suite.\n\n## Risks\n\nThe observed error identifies a call seam, not yet a proven root cause. Avoid\nchanging production behavior to accommodate an incorrectly shaped test double.\nUnlocked dependency resolution is a separate observed limit; one successful\nrun would not prove all future dependency versions work."
+      },
+      {
+        "type": "comment",
+        "content": "Causal diagnostic follow-up 2026-10-08: actual current hosted artifact11531594218 (ZIP SHA2566232419d824870cd9eb053ba77035cd32e41ff21e3b278e664fb7f1b284dc7c1) binds head6370ff968841115e681e2b21d80277fd0f0a0289/base154440f3c997aa9208194bba59b5edbef3654f78, exact/clean, all6gates attempted, test exit1. Its Node22.20.0 stack calls exec_at.cljs$core$IFn$_invoke$arity$2 and reports that property is not a function. The source call, two/three-arity production function and single-arity delayed-git replacement are byte-identical between this head, base and working tree; Git history retains the fixture since initial extraction7c7c62343fea0241ac545e37f14e57ab344bfa30. No prior passing baseline was established. A bounded separately compiled representation probe using existing cached ClojureScript1.12.145/static-fns true/optimizations none on localNode24.14.1 reproduced the same missing-arity-property TypeError with the single-arity replacement; original control and restoration succeed, zero production Git processes. This proves the proposed call-shape mechanism, not the complete owning test, exact hosted environment or a repaired suite. Preserve production timeout/concurrency semantics and original full-suite assertions when a qualified fixture repair is admitted. Proof .ημ/review-evidence/receipt-discovery-arity-causal-diagnostic-20261008.json SHA2568f638d09281c643609c3e1eae3018c3daf0244b82822f0a54e1f22e6ef3020c2. The first private launch used a wrong generated-bootstrap cwd and failed MODULE_NOT_FOUND; retained unchanged output ran correctly from /, not production verification. Free space15,985,807,360bytes is below20GiB; reused existing compiler/classpath only, no full checkout or dependency install. Scope choice remains pending; this card staysIncoming, no owning test/source patch, new estimate, Ready, compatibility implementation, skipped test, provider retry or character runtime change."
+      }
+    ],
+    "source-path": "/home/err/spaces/cephalon-receipt-attribution/receipt-river/docs/kanban/baseline-discovery-test-git-arity.md"
+  }
+}

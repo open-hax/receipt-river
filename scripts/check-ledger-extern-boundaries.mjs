@@ -27,7 +27,7 @@ function cljsFiles(directory) {
     if (entry.isDirectory()) {
       return cljsFiles(entryPath);
     }
-    return entry.isFile() && entry.name.endsWith(".cljs") ? [entryPath] : [];
+    return entry.isFile() && (entry.name.endsWith(".cljs") || entry.name.endsWith(".cljc")) ? [entryPath] : [];
   });
 }
 

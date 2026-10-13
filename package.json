@@ -18,6 +18,7 @@
     "build": "shadow-cljs release receipt-river",
     "prepublishOnly": "pnpm build",
     "test": "shadow-cljs compile test && node target/receipt-river-test.cjs",
+    "test:public-api": "node test/js/compatibility_public_api.mjs",
     "lint:kondo": "clj-kondo --lint src/cljs test/cljs && node scripts/check-ledger-extern-boundaries.mjs receipt-river",
     "watch": "shadow-cljs watch receipt-river",
     "clean": "rm -rf dist-cljs target .shadow-cljs"
