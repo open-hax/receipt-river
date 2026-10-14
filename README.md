@@ -59,4 +59,3 @@ lifetimes so a stalled child process cannot block discovery indefinitely.
 ## Fork sync
 
 After [open-hax/receipt-river#3](https://github.com/open-hax/receipt-river/pull/3) merged as `747d5030`, this fork's `sync/747d503` branch carries that org merge commit back onto fork `main` (E1.11 promote→sync convention). No package tree change beyond the promotion merge itself.
-
