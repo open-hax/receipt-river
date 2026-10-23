@@ -160,3 +160,13 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: e4311605c10701ed04e737d81aab7f2b59fe37e7b74c03846187d5bdeec5f076
   note: "Bound changes to the exact runtime pin and required accountability; preserve prior bytes, incoming state and branch policy. Native service proof does not qualify a later member head."
+
+- ts: 2026-10-23T10:21:00.403292Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R6 reviewer runtime pin
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: 890be4adc1b20c61dccf09610bb1c0f3cd169e7d6b74f015e19c2c458a6e57fa
+  note: "Bound changes to the exact runtime pin and required accountability; preserve prior bytes, incoming state and branch policy. Native service proof does not qualify a later member head."
