@@ -4,12 +4,14 @@
  {:receipt-river
   {:target :esm
    :runtime :node
+   :js-options {:js-provider :import}
    :output-dir "dist-cljs"
    :modules
    {:index
     {:exports
      {:buildEvent eta-mu.receipt-river.api/build-event
       :validateLine eta-mu.receipt-river.api/validate-line
+      :validateLedger eta-mu.receipt-river.api/validate-ledger
       :schemaRegistry eta-mu.receipt-river.api/schema-registry
       :currentSchemas eta-mu.receipt-river.api/current-schemas}}}
    :compiler-options {:output-feature-set :es-next
