@@ -150,3 +150,13 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: 02a4c1af6492c5faf4db30f8914ab53cde6ed48fd824cda0ed4f3a3b17c271f9
   note: "Keep runtime pins in generated callers; preserve incoming frontmatter and append-only accountability. Shared service proof and member exact-head hosted proof remain distinct."
+
+- ts: 2026-10-23T09:42:08.797546Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R5 reviewer runtime pin
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: e4311605c10701ed04e737d81aab7f2b59fe37e7b74c03846187d5bdeec5f076
+  note: "Bound changes to the exact runtime pin and required accountability; preserve prior bytes, incoming state and branch policy. Native service proof does not qualify a later member head."
