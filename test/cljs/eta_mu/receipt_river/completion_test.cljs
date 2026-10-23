@@ -59,3 +59,29 @@
   (let [bad (pr-str (assoc original :kind :made-up))
         fix (correction 1 (crypto/short-sha256 bad 64) {:repo "r" :pi "p"})]
     (is (false? (:ok (api/validate-ledger [bad fix]))))))
+
+(deftest independent-and-single-field-completions
+  (let [one (pr-str (assoc original :repo "already-recorded"))
+        two (pr-str (assoc original :pi "already-recorded"))
+        first-fix (correction 1 (crypto/short-sha256 one 64) {:pi "explicit-pi"})
+        second-fix (correction 2 (crypto/short-sha256 two 64) {:repo "explicit-repo"})
+        result (api/validate-ledger [one two first-fix second-fix])]
+    (is (:ok result))
+    (is (false? (:raw-ok result)))
+    (is (= 2 (count (:completions result))))
+    (is (= "already-recorded" (get-in result [:completions 0 :completed-record :repo])))
+    (is (= "already-recorded" (get-in result [:completions 1 :completed-record :pi])))))
+
+(deftest malformed-declarations-refuse-without-throwing-or-disappearing
+  (doseq [claim [nil false true "bad" []]]
+    (let [event (:event (api/validate-line completion 2))
+          malformed (pr-str (assoc-in event [:event/payload :decisions :receipt-river/metadata-completion] claim))
+          result (api/validate-ledger [raw malformed])]
+      (is (false? (:ok result)))
+      (is (= 1 (count (:completions result))))
+      (is (false? (get-in result [:completions 0 :ok]))))))
+
+(deftest explicit-nil-metadata-is-never-overwritten
+  (let [source (pr-str (assoc original :repo nil))
+        fix (correction 1 (crypto/short-sha256 source 64) {:repo "replacement" :pi "p"})]
+    (is (false? (:ok (api/validate-ledger [source fix]))))))
