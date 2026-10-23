@@ -140,3 +140,13 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: ".ημ/receipts.edn#sha256:f6beed9aeabec076ed1bd3b08c2a292bfad4553a9c7daa3aab81df2205463342"
   note: "Use the child canonical card and receipt locations; preserve every old ledger byte and keep generated caller syntax distinct from hosted worker/model qualification. Runtime ownership stays in eta-mu; existing checks and approval policy remain authoritative. No new spore or promotion."
+
+- ts: 2026-10-23T08:40:36.529367Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R4 caller and incoming planning clarification
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: 02a4c1af6492c5faf4db30f8914ab53cde6ed48fd824cda0ed4f3a3b17c271f9
+  note: "Keep runtime pins in generated callers; preserve incoming frontmatter and append-only accountability. Shared service proof and member exact-head hosted proof remain distinct."
