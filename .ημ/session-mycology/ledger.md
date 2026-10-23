@@ -130,3 +130,43 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: receipt-no-git-context-GREEN-20261009
   note: Keep file-location fallback separate from successfully resolved attribution. Source ownership and real consumer negatives prevent permissive integration drift. Existing lessons suffice, no spore/promotion.
+
+- ts: "2026-10-23T06:58:32.752Z"
+  session: "/home/err/.local/share/foresight-worktrees/antigravity-members-20261023/receipt-river"
+  task: "Prepare incoming pinned Antigravity reviewer adoption provenance"
+  p-efficiency: 0.9
+  p-friction: 0.2
+  p-skill-candidate: 0
+  spore: none
+  receipt-refs: ".ημ/receipts.edn#sha256:f6beed9aeabec076ed1bd3b08c2a292bfad4553a9c7daa3aab81df2205463342"
+  note: "Use the child canonical card and receipt locations; preserve every old ledger byte and keep generated caller syntax distinct from hosted worker/model qualification. Runtime ownership stays in eta-mu; existing checks and approval policy remain authoritative. No new spore or promotion."
+
+- ts: 2026-10-23T08:40:36.529367Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R4 caller and incoming planning clarification
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: 02a4c1af6492c5faf4db30f8914ab53cde6ed48fd824cda0ed4f3a3b17c271f9
+  note: "Keep runtime pins in generated callers; preserve incoming frontmatter and append-only accountability. Shared service proof and member exact-head hosted proof remain distinct."
+
+- ts: 2026-10-23T09:42:08.797546Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R5 reviewer runtime pin
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: e4311605c10701ed04e737d81aab7f2b59fe37e7b74c03846187d5bdeec5f076
+  note: "Bound changes to the exact runtime pin and required accountability; preserve prior bytes, incoming state and branch policy. Native service proof does not qualify a later member head."
+
+- ts: 2026-10-23T10:21:00.403292Z
+  session: codex/foresight-antigravity-rollout
+  task: Publish receipt-river R6 reviewer runtime pin
+  p-efficiency: 0.95
+  p-friction: 0.05
+  p-skill-candidate: 0.0
+  spore: none
+  receipt-refs: 890be4adc1b20c61dccf09610bb1c0f3cd169e7d6b74f015e19c2c458a6e57fa
+  note: "Bound changes to the exact runtime pin and required accountability; preserve prior bytes, incoming state and branch policy. Native service proof does not qualify a later member head."
