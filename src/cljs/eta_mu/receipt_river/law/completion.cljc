@@ -25,6 +25,7 @@
                (contains? record :event/schema)
                (= :adjudication (get-in record [:event/payload :kind]))
                (map? claim)
+               (map? fields)
                (= #{:version :line-number :sha256 :fields} (set (keys claim)))
                (= 1 (:version claim))
                target (not (:ok target)) (map? original)

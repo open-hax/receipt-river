@@ -85,3 +85,8 @@
   (let [source (pr-str (assoc original :repo nil))
         fix (correction 1 (crypto/short-sha256 source 64) {:repo "replacement" :pi "p"})]
     (is (false? (:ok (api/validate-ledger [source fix]))))))
+
+(deftest malformed-field-containers-refuse-without-throwing
+  (doseq [fields [nil false true "bad" []]]
+    (let [fix (correction 1 (crypto/short-sha256 raw 64) fields)]
+      (is (false? (:ok (api/validate-ledger [raw fix])))))))
