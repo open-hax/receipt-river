@@ -130,3 +130,9 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: receipt-no-git-context-GREEN-20261009
   note: Keep file-location fallback separate from successfully resolved attribution. Source ownership and real consumer negatives prevent permissive integration drift. Existing lessons suffice, no spore/promotion.
+
+- context: shared-login receipt-owner organization follow-up
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  note: Fresh organization review exposed line-terminator hash and malformed decisions container boundaries. Added failing regressions before owner fixes; original source lines and ledger history preserved. Existing boundary-testing guidance suffices; no spore or promotion.
