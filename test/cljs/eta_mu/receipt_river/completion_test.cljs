@@ -23,6 +23,23 @@
 (def completion (correction 1 (crypto/short-sha256 raw 64)
                             {:repo "riatzukiza/axxium" :pi "identity implementation"}))
 
+(deftest source-line-terminators-do-not-change-content-hash
+  (doseq [ending ["\n" "\r\n"]]
+    (let [line (str raw ending)
+          result (api/validate-ledger [line completion])]
+      (is (:ok result))
+      (is (= line (get-in result [:rows 0 :line])))
+      (is (= (crypto/short-sha256 raw 64) (get-in result [:rows 0 :sha256]))))))
+
+(deftest malformed-decisions-containers-refuse-on-otherwise-valid-ledger
+  (doseq [decisions [nil false true "bad" []]]
+    (let [event (:event (api/validate-line completion 1))
+          line (pr-str (assoc-in event [:event/payload :decisions] decisions))
+          result (api/validate-ledger [line])]
+      (is (false? (:ok result)))
+      (is (= 1 (count (:completions result))))
+      (is (false? (get-in result [:completions 0 :ok]))))))
+
 (deftest explicit-completion-retains-raw-invalidity
   (let [result (api/validate-ledger [raw completion])]
     (is (:ok result))

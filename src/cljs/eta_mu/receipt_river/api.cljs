@@ -71,5 +71,5 @@
   (completion/summarize
     (mapv (fn [index line]
             (assoc (validate-line line (inc index))
-                   :sha256 (crypto/short-sha256 line 64)))
+                   :sha256 (crypto/short-sha256 (str/replace line #"\r?\n$" "") 64)))
           (range) lines)))

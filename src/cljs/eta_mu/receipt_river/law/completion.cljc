@@ -8,7 +8,10 @@
    This is record admission, not authentication of the event's asserted producer."
   [rows correction-row]
   (let [record (:event correction-row)
-        decisions (get-in record [:event/payload :decisions])
+        payload (:event/payload record)
+        decisions (:decisions payload)
+        malformed-decisions? (and (map? payload) (contains? payload :decisions)
+                                  (not (map? decisions)))
         claim (get-in record [:event/payload :decisions :receipt-river/metadata-completion])
         declared? (and (map? decisions) (contains? decisions :receipt-river/metadata-completion))
         line-number (:line-number claim)
@@ -20,8 +23,8 @@
         missing (when (map? original)
                   (set (filter #(not (contains? original %)) [:repo :pi])))
         completed (when (and (map? original) (map? fields)) (merge original fields))]
-    (when declared?
-      (if (and (:ok correction-row)
+    (when (or declared? malformed-decisions?)
+      (if (and (not malformed-decisions?) (:ok correction-row)
                (contains? record :event/schema)
                (= :adjudication (get-in record [:event/payload :kind]))
                (map? claim)
