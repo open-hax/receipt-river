@@ -178,3 +178,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.3
   receipt-refs: shared-login-and-federation; native4370082348
   note: Lexical validation must model the standard reader macro boundaries, including metadata, while retaining character and string literals. Preserve a regression for both standard and deprecated metadata dispatch.
+
+- ts: 2026-10-25T10:03:49.098156+00:00
+  origin: ledger-numeric-discard-boundary
+  p-efficiency: 0.8
+  p-friction: 0.35
+  p-skill-candidate: 0.45
+  receipt-refs: shared-login-and-federation; native4370414143
+  note: EDN number readers and symbol readers have different macro boundaries. Preserve the number-to-dispatch boundary before standard reading can erase discarded data, while leaving literal symbol and keyword spellings intact. Test integer, signed, decimal, exponent and nested forms through actual ledger completion.

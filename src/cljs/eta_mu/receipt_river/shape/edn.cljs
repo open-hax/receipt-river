@@ -14,9 +14,11 @@
   ;; Inspect lexical tokens before the standard reader can erase a discard.
   ;; Strings, character literals, comments and whole symbol/keyword tokens
   ;; are opaque, so literal #_ data does not become reader syntax here.
+  ;; Numeric literals start with a digit (possibly signed) and stop at #,
+  ;; unlike symbols. Preserve that boundary before the reader erases data.
   ;; tools.reader remains responsible for validating the EDN grammar.
   (some #{"#_"}
-        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[^\s,\[\]{}();\"\\^]+|[\s\S]"
+        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[+-]?[0-9][^\s,\[\]{}();\"\\^#]*|[^\s,\[\]{}();\"\\^]+|[\s\S]"
                 line)))
 
 (defn parse-ledger-line
