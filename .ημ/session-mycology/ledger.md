@@ -162,3 +162,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.35
   receipt-refs: shared-login-and-federation; native-finding4369936488
   note: Standard EDN readers intentionally erase reader discards. Ledger admission must reject discard syntax before that loss while preserving literal strings, character data, and symbol spellings. Keep the legacy public line API separate.
+
+- ts: 2026-10-25T07:47:02.813169+00:00
+  origin: shared-login-reader-discard-timestamp-correction
+  p-efficiency: 0.5
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  receipt-refs: shared-login-and-federation; d709e3d
+  note: The preceding entry incorrectly wrote a future 07:55Z timestamp. Actual system-clock read immediately after append was 2026-10-25T07:46:38Z; use that observation as its upper time bound. Prior bytes retained.
