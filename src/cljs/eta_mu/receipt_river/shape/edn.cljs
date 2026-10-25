@@ -16,9 +16,10 @@
   ;; are opaque, so literal #_ data does not become reader syntax here.
   ;; Numeric literals start with a digit (possibly signed) and stop at #,
   ;; unlike symbols. Preserve that boundary before the reader erases data.
+  ;; Metadata starts a new token after character names as well as symbols.
   ;; tools.reader remains responsible for validating the EDN grammar.
   (some #{"#_"}
-        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[+-]?[0-9][^\s,\[\]{}();\"\\^#]*|[^\s,\[\]{}();\"\\^]+|[\s\S]"
+        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\^]+|[\s\S])|;[^\r\n]*|#_|[+-]?[0-9][^\s,\[\]{}();\"\\^#]*|[^\s,\[\]{}();\"\\^]+|[\s\S]"
                 line)))
 
 (defn parse-ledger-line

@@ -55,6 +55,10 @@
                   (str (subs raw 0 (dec (count raw))) " :note 1.5#_false}")
                   (str (subs raw 0 (dec (count raw))) " :note 1e3#_false}")
                   (str (subs raw 0 (dec (count raw))) " :note [1#_false]}")
+                  (str (subs raw 0 (dec (count raw))) " :note [\\a^#_nil :tag []]}")
+                  (str (subs raw 0 (dec (count raw))) " :note (\\a^#_nil {} [])}")
+                  (str (subs raw 0 (dec (count raw))) " :note #{\\a^#_nil :tag []}}")
+                  (str (subs raw 0 (dec (count raw))) " :note {\\a ^#_nil :tag []}}")
                   (str (subs raw 0 (dec (count raw))) " :extra [#_false true]}")
                   (str (subs raw 0 (dec (count raw))) " :extra #{#_false true}}")
                   (str (subs raw 0 (dec (count raw))) " :extra {:nested #_false true}}")]]
@@ -68,7 +72,7 @@
 
 (deftest discard-like-literal-data-remains-admissible
   (doseq [literal ["#_ literal" "escaped quote \" #_ data" "slash \\ #_ data"
-                   'symbol#_data '+symbol#_data '-symbol#_data :keyword#_data :123#_data \# \" \\]]
+                   'symbol#_data '+symbol#_data '-symbol#_data :keyword#_data :123#_data \# \" \\ \^]]
     (let [source (pr-str (assoc original :note literal))
           corrected (correction 1 (crypto/short-sha256 source 64)
                                 {:repo "riatzukiza/axxium" :pi "identity implementation"})]

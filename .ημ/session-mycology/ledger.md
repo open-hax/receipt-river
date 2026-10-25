@@ -194,3 +194,10 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.38
   receipt-refs: heartbeat4-rr-review-budget-proof.json; native40183222296
   note: A completed deterministic build does not imply the native review completed. Inspect actual cancelled job duration and immutable callee; use the existing accepted bounded budget instead of retrying a hardcoded forty-five-minute job or treating cancellation as provider quota. No spore promoted.
+
+
+## 2026-10-25T12:09:00.715821+00:00 — character metadata boundary verification
+
+- Receipt: latest owner-built test-run; efficiency0.80, friction0.37, skill-candidate0.20.
+- The native review failed its lifecycle boundary and supplies no approval, but its explicitly unverified candidate was independently reproduced through the actual compiled standard reader. A character token followed by metadata hid discard syntax from lexical admission. Preserve the failed trace, fix the owning boundary, and require fresh full review rather than widening host permissions or treating raw output as approval.
+- RED47tests436assertions9fail; GREEN47/436PASS, lint/boundary0warnings, release0warnings, built legacy publicAPI15PASS. No historical receipt rewrite, native settlement, deployment or spore promotion.
