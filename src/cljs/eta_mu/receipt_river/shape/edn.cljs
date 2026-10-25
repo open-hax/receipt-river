@@ -23,9 +23,12 @@
                 line)))
 
 (defn parse-ledger-line
-  "Read exactly one form and permit only trailing EDN whitespace. The legacy
+  "Read one physical line, optionally ending in LF or CRLF, with one complete
+   EDN form and trailing EDN whitespace. The legacy
    parse-line/validateLine surface retains its original first-form behavior."
   [line]
+  (when-not (re-matches #"[^\r\n]*(?:\r?\n)?" line)
+    (throw (ex-info "expected one physical ledger line" {})))
   (when (reader-discard? line)
     (throw (ex-info "reader discards are not permitted in ledger lines" {})))
   (let [input (reader-types/string-push-back-reader line)

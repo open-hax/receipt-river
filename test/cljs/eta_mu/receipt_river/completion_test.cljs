@@ -44,6 +44,37 @@
       (is (= line (get-in result [:rows 0 :line])))
       (is (= (crypto/short-sha256 raw 64) (get-in result [:rows 0 :sha256]))))))
 
+(deftest ledger-completion-cannot-admit-multiple-physical-lines
+  (doseq [source [(str "\n" raw)
+                  (str "\r" raw)
+                  (str "; note\n" raw)
+                  (str (subs raw 0 1) "\n" (subs raw 1))
+                  (str (subs raw 0 1) "\r\n" (subs raw 1))
+                  (str raw "\n\n")
+                  (str raw "\r\n\r\n")
+                  (str raw "\r")
+                  (str (subs raw 0 (dec (count raw))) " :note \"two\nlines\"}")
+                  (str (subs raw 0 (dec (count raw))) " :note \"two\rlines\"}")]]
+    (let [corrected (correction 1 (crypto/short-sha256 source 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})
+          result (api/validate-ledger [source corrected])]
+      (is (some? (:event (api/validate-line source 1))) "legacy first-form reader remains unchanged")
+      (is (false? (:ok result)) source)
+      (is (nil? (get-in result [:rows 0 :event])) source)
+      (is (false? (get-in result [:completions 0 :ok])) source)
+      (is (= source (get-in result [:rows 0 :line])) source))))
+
+(deftest escaped-line-break-data-stays-on-one-physical-line
+  (doseq [ending ["" "\n" "\r\n"]]
+    (let [source (str (pr-str (assoc original :note "two\nlines\rretained")) ending)
+          corrected (correction 1 (crypto/short-sha256
+                                    (pr-str (assoc original :note "two\nlines\rretained")) 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})
+          result (api/validate-ledger [source corrected])]
+      (is (:ok result))
+      (is (= source (get-in result [:rows 0 :line])))
+      (is (= "two\nlines\rretained" (get-in result [:rows 0 :event :note]))))))
+
 (deftest ledger-completion-cannot-admit-reader-discards-anywhere
   (doseq [source [(str "#_{:extra true} " raw)
                   (str "^#_nil {:tag true} " raw)

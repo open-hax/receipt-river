@@ -201,3 +201,10 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
 - Receipt: latest owner-built test-run; efficiency0.80, friction0.37, skill-candidate0.20.
 - The native review failed its lifecycle boundary and supplies no approval, but its explicitly unverified candidate was independently reproduced through the actual compiled standard reader. A character token followed by metadata hid discard syntax from lexical admission. Preserve the failed trace, fix the owning boundary, and require fresh full review rather than widening host permissions or treating raw output as approval.
 - RED47tests436assertions9fail; GREEN47/436PASS, lint/boundary0warnings, release0warnings, built legacy publicAPI15PASS. No historical receipt rewrite, native settlement, deployment or spore promotion.
+
+
+## 2026-10-25T12:40:03.136821+00:00 — physical source lines before semantic ledger admission
+
+- Receipt: latest owner-built test-run; efficiency0.84, friction0.25, skill-candidate0.18.
+- A hash binds supplied bytes but does not prove one vector element is one physical ledger line. Verify the existing physical framing contract before the reader can skip comments or interpret embedded line breaks. Adopt the reviewer's exact narrow check after actual regression.
+- RED49tests495assertions26fail; GREEN49/495PASS, lint/boundary0warnings, release0warnings, legacybuiltAPI15PASS. Escaped line-break data still admitted; raw bytes and historical validity preserved. No spore, native approval or deployment credit.

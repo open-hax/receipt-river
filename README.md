@@ -65,7 +65,10 @@ After [open-hax/receipt-river#3](https://github.com/open-hax/receipt-river/pull/
 `validateLedger(lines)` keeps every raw UTF-8 source line and its validation
 result. Its `raw-ok` flag never becomes true because of a later correction.
 The ledger decoder requires exactly one complete EDN form per source line,
-allowing trailing EDN whitespace only. Additional forms, discarded data and
+optionally ending with one LF or CRLF and allowing trailing EDN whitespace
+only. Embedded CR/LF, including inside strings or after comments, refuse
+admission; escaped line-break data within an EDN string remains valid.
+Additional forms, discarded data and
 trailing comments refuse admission even when a correction hashes the full
 line. The public `validateLine` compatibility behavior remains unchanged;
 use `validateLedger` for ordered ledger admission.
