@@ -170,3 +170,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.1
   receipt-refs: shared-login-and-federation; d709e3d
   note: The preceding entry incorrectly wrote a future 07:55Z timestamp. Actual system-clock read immediately after append was 2026-10-25T07:46:38Z; use that observation as its upper time bound. Prior bytes retained.
+
+- ts: 2026-10-25T08:43:11.937129+00:00
+  origin: ledger-metadata-discard-followup
+  p-efficiency: 0.8
+  p-friction: 0.4
+  p-skill-candidate: 0.3
+  receipt-refs: shared-login-and-federation; native4370082348
+  note: Lexical validation must model the standard reader macro boundaries, including metadata, while retaining character and string literals. Preserve a regression for both standard and deprecated metadata dispatch.

@@ -46,6 +46,8 @@
 
 (deftest ledger-completion-cannot-admit-reader-discards-anywhere
   (doseq [source [(str "#_{:extra true} " raw)
+                  (str "^#_nil {:tag true} " raw)
+                  (str "#^#_nil {:tag true} " raw)
                   (str " , #_nil #_[] " raw)
                   (str (subs raw 0 (dec (count raw))) " :extra [#_false true]}")
                   (str (subs raw 0 (dec (count raw))) " :extra #{#_false true}}")

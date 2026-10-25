@@ -16,7 +16,7 @@
   ;; are opaque, so literal #_ data does not become reader syntax here.
   ;; tools.reader remains responsible for validating the EDN grammar.
   (some #{"#_"}
-        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[^\s,\[\]{}();\"\\]+|[\s\S]"
+        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[^\s,\[\]{}();\"\\^]+|[\s\S]"
                 line)))
 
 (defn parse-ledger-line
