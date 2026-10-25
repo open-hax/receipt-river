@@ -10,10 +10,21 @@
 (defn parse-line [line]
   (reader/read-string line))
 
+(defn- reader-discard? [line]
+  ;; Inspect lexical tokens before the standard reader can erase a discard.
+  ;; Strings, character literals, comments and whole symbol/keyword tokens
+  ;; are opaque, so literal #_ data does not become reader syntax here.
+  ;; tools.reader remains responsible for validating the EDN grammar.
+  (some #{"#_"}
+        (re-seq #"\"(?:\\[\s\S]|[^\"\\])*\"|\\(?:[^\s,\[\]{}();\"\\]+|[\s\S])|;[^\r\n]*|#_|[^\s,\[\]{}();\"\\]+|[\s\S]"
+                line)))
+
 (defn parse-ledger-line
   "Read exactly one form and permit only trailing EDN whitespace. The legacy
    parse-line/validateLine surface retains its original first-form behavior."
   [line]
+  (when (reader-discard? line)
+    (throw (ex-info "reader discards are not permitted in ledger lines" {})))
   (let [input (reader-types/string-push-back-reader line)
         eof (list ::eof)
         record (stream/read {:eof eof} input)

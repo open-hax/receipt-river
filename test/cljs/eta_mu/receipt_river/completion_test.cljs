@@ -44,6 +44,28 @@
       (is (= line (get-in result [:rows 0 :line])))
       (is (= (crypto/short-sha256 raw 64) (get-in result [:rows 0 :sha256]))))))
 
+(deftest ledger-completion-cannot-admit-reader-discards-anywhere
+  (doseq [source [(str "#_{:extra true} " raw)
+                  (str " , #_nil #_[] " raw)
+                  (str (subs raw 0 (dec (count raw))) " :extra [#_false true]}")
+                  (str (subs raw 0 (dec (count raw))) " :extra #{#_false true}}")
+                  (str (subs raw 0 (dec (count raw))) " :extra {:nested #_false true}}")]]
+    (let [corrected (correction 1 (crypto/short-sha256 source 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})
+          result (api/validate-ledger [source corrected])]
+      (is (false? (:ok result)) source)
+      (is (nil? (get-in result [:rows 0 :event])) source)
+      (is (false? (get-in result [:completions 0 :ok])) source)
+      (is (= source (get-in result [:rows 0 :line])) source))))
+
+(deftest discard-like-literal-data-remains-admissible
+  (doseq [literal ["#_ literal" "escaped quote \" #_ data" "slash \\ #_ data"
+                   'symbol#_data :keyword#_data \# \" \\]]
+    (let [source (pr-str (assoc original :note literal))
+          corrected (correction 1 (crypto/short-sha256 source 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})]
+      (is (:ok (api/validate-ledger [source corrected])) (pr-str literal)))))
+
 (deftest malformed-decisions-containers-refuse-on-otherwise-valid-ledger
   (doseq [decisions [nil false true "bad" []]]
     (let [event (:event (api/validate-line completion 1))

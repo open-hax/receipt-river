@@ -154,3 +154,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: shared-login-and-federation; native4369792631
   note: Keep legacy validateLine compatibility while the owning ledger decoder enforces complete input. Use the compiled public owner API when NBB lacks standard CLJS reader namespaces; do not clone validation in the consumer.
+
+- ts: 2026-10-25T07:55:00Z
+  origin: shared-login-reader-discard-followup
+  p-efficiency: 0.78
+  p-friction: 0.35
+  p-skill-candidate: 0.35
+  receipt-refs: shared-login-and-federation; native-finding4369936488
+  note: Standard EDN readers intentionally erase reader discards. Ledger admission must reject discard syntax before that loss while preserving literal strings, character data, and symbol spellings. Keep the legacy public line API separate.
