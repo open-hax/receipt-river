@@ -23,6 +23,19 @@
 (def completion (correction 1 (crypto/short-sha256 raw 64)
                             {:repo "riatzukiza/axxium" :pi "identity implementation"}))
 
+(deftest ledger-completion-cannot-admit-extra-edn-after-the-source-map
+  (doseq [suffix [" {:extra true}" " true" " false" " nil" " []" " #_{:extra true}" " ; trailing comment"]]
+    (let [source (str raw suffix)
+          corrected (correction 1 (crypto/short-sha256 source 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})
+          result (api/validate-ledger [source corrected])]
+      (is (= original (:event (api/validate-line source 1))) "legacy validateLine contract is unchanged")
+      (is (false? (:ok result)) suffix)
+      (is (false? (:raw-ok result)) suffix)
+      (is (nil? (get-in result [:rows 0 :event])) suffix)
+      (is (false? (get-in result [:completions 0 :ok])) suffix)
+      (is (= source (get-in result [:rows 0 :line])) suffix))))
+
 (deftest source-line-terminators-do-not-change-content-hash
   (doseq [ending ["\n" "\r\n"]]
     (let [line (str raw ending)

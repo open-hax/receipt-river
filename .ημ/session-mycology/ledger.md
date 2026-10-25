@@ -145,3 +145,12 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: 8823f23a-5fac-424e-99dc-68643cc72b00,95ca57546fc7c677555191ea2db83754d090ef5a
   note: Append-only clarification of the prior undated shared-login receipt-owner organization follow-up. Its verification is recorded by receipt8823f23a at2026-10-24T05:01:01.358Z and commit95ca575. Prior complete ledger SHA256=c8e242918868bdf205da76e013ad679582861a1551b83c5d2aeed6a17e6b39b0. Historical bytes and event times are unchanged; this timestamp records the clarification, not a backdated run.
+- ts: 2026-10-25T06:39:24.338383526Z
+  session: /home/err/.local/share/codex-work/axxium-sso/receipt-owner-current
+  task: Require one complete EDN form before ledger metadata completion
+  p-efficiency: 0.7
+  p-friction: 0.6
+  p-skill-candidate: 0.4
+  spore: none
+  receipt-refs: shared-login-and-federation; native4369792631
+  note: Keep legacy validateLine compatibility while the owning ledger decoder enforces complete input. Use the compiled public owner API when NBB lacks standard CLJS reader namespaces; do not clone validation in the consumer.

@@ -64,6 +64,11 @@ After [open-hax/receipt-river#3](https://github.com/open-hax/receipt-river/pull/
 
 `validateLedger(lines)` keeps every raw UTF-8 source line and its validation
 result. Its `raw-ok` flag never becomes true because of a later correction.
+The ledger decoder requires exactly one complete EDN form per source line,
+allowing trailing EDN whitespace only. Additional forms, discarded data and
+trailing comments refuse admission even when a correction hashes the full
+line. The public `validateLine` compatibility behavior remains unchanged;
+use `validateLedger` for ordered ledger admission.
 A valid versioned adjudication receipt may declare
 `:decisions {:receipt-river/metadata-completion {:version 1 :line-number N
 :sha256 "<64 hex source line hash>" :fields {:repo "..." :pi "..."}}}`.

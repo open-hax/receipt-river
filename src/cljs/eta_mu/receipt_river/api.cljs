@@ -17,9 +17,9 @@
 (defn build-event [metadata payload]
   (event/build-event metadata payload))
 
-(defn- validate-line-in-context [line line-number context]
+(defn- validate-line-in-context [line line-number context decode]
   (try
-    (let [record (edn/parse-line line)
+    (let [record (decode line)
           original-errors (law/record-errors record)
           errors (if context (law/record-errors record context) original-errors)
           attribution (law/containing-repository-attribution record context)]
@@ -56,12 +56,12 @@
   The public third argument is a nonblank string. Invalid attribution input
   retains context-free behavior. Results remain ClojureScript maps."
   ([line line-number]
-   (validate-line-in-context line line-number nil))
+   (validate-line-in-context line line-number nil edn/parse-line))
   ([line line-number containing-repository-path]
    (let [context (when (and (string? containing-repository-path)
                             (not (str/blank? containing-repository-path)))
                    {:repository/path containing-repository-path})]
-     (validate-line-in-context line line-number context))))
+     (validate-line-in-context line line-number context edn/parse-line))))
 
 (defn validate-ledger
   "Validate ordered raw lines, retaining raw errors beside explicit completions.
@@ -70,6 +70,6 @@
   [lines]
   (completion/summarize
     (mapv (fn [index line]
-            (assoc (validate-line line (inc index))
+            (assoc (validate-line-in-context line (inc index) nil edn/parse-ledger-line)
                    :sha256 (crypto/short-sha256 (str/replace line #"\r?\n$" "") 64)))
           (range) lines)))
