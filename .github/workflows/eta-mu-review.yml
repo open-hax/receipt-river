@@ -12,11 +12,12 @@ permissions:
 jobs:
   review:
     name: Evidence-first review (eta-mu)
-    uses: open-hax/eta-mu/.github/workflows/opencode-code-review.yml@45ec644c2d15ed511e9bc1e797d1b4073b63dbfc
+    uses: open-hax/eta-mu/.github/workflows/opencode-code-review.yml@4eaa34d18b5e07d9f26f0ebe4d20cf7e65ef9a41
     with:
       pr_head_sha: ${{ github.event.pull_request.head.sha }}
       model: opencode/mimo-v2.6-flash-free
-      muse_revision: 0b9a91492c8355e6933dc2164d35668cb76d9e60
+      muse_revision: c1369c223cf3c57e3e31934a6d746bfcdfe73f5a
+      review_timeout_minutes: 180
       agents_revision: 4b4f48dae1b804b2581974e604cca618ecedadf1
       opencode_version: 1.18.31
       node_version: "22.20.0"

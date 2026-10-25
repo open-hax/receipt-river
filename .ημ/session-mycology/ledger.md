@@ -130,3 +130,89 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: receipt-no-git-context-GREEN-20261009
   note: Keep file-location fallback separate from successfully resolved attribution. Source ownership and real consumer negatives prevent permissive integration drift. Existing lessons suffice, no spore/promotion.
+
+- context: shared-login receipt-owner organization follow-up
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  spore: none
+  note: Fresh organization review exposed line-terminator hash and malformed decisions container boundaries. Added failing regressions before owner fixes; original source lines and ledger history preserved. Existing boundary-testing guidance suffices; no spore or promotion.
+
+- ts: "2026-10-25T05:34:47.312976+00:00"
+  origin: shared-login-receipt-owner-provenance-clarification
+  p-efficiency: 0.9
+  p-friction: 0.1
+  p-skill-candidate: 0
+  spore: none
+  receipt-refs: 8823f23a-5fac-424e-99dc-68643cc72b00,95ca57546fc7c677555191ea2db83754d090ef5a
+  note: Append-only clarification of the prior undated shared-login receipt-owner organization follow-up. Its verification is recorded by receipt8823f23a at2026-10-24T05:01:01.358Z and commit95ca575. Prior complete ledger SHA256=c8e242918868bdf205da76e013ad679582861a1551b83c5d2aeed6a17e6b39b0. Historical bytes and event times are unchanged; this timestamp records the clarification, not a backdated run.
+- ts: 2026-10-25T06:39:24.338383526Z
+  session: /home/err/.local/share/codex-work/axxium-sso/receipt-owner-current
+  task: Require one complete EDN form before ledger metadata completion
+  p-efficiency: 0.7
+  p-friction: 0.6
+  p-skill-candidate: 0.4
+  spore: none
+  receipt-refs: shared-login-and-federation; native4369792631
+  note: Keep legacy validateLine compatibility while the owning ledger decoder enforces complete input. Use the compiled public owner API when NBB lacks standard CLJS reader namespaces; do not clone validation in the consumer.
+
+- ts: 2026-10-25T07:55:00Z
+  origin: shared-login-reader-discard-followup
+  p-efficiency: 0.78
+  p-friction: 0.35
+  p-skill-candidate: 0.35
+  receipt-refs: shared-login-and-federation; native-finding4369936488
+  note: Standard EDN readers intentionally erase reader discards. Ledger admission must reject discard syntax before that loss while preserving literal strings, character data, and symbol spellings. Keep the legacy public line API separate.
+
+- ts: 2026-10-25T07:47:02.813169+00:00
+  origin: shared-login-reader-discard-timestamp-correction
+  p-efficiency: 0.5
+  p-friction: 0.2
+  p-skill-candidate: 0.1
+  receipt-refs: shared-login-and-federation; d709e3d
+  note: The preceding entry incorrectly wrote a future 07:55Z timestamp. Actual system-clock read immediately after append was 2026-10-25T07:46:38Z; use that observation as its upper time bound. Prior bytes retained.
+
+- ts: 2026-10-25T08:43:11.937129+00:00
+  origin: ledger-metadata-discard-followup
+  p-efficiency: 0.8
+  p-friction: 0.4
+  p-skill-candidate: 0.3
+  receipt-refs: shared-login-and-federation; native4370082348
+  note: Lexical validation must model the standard reader macro boundaries, including metadata, while retaining character and string literals. Preserve a regression for both standard and deprecated metadata dispatch.
+
+- ts: 2026-10-25T10:03:49.098156+00:00
+  origin: ledger-numeric-discard-boundary
+  p-efficiency: 0.8
+  p-friction: 0.35
+  p-skill-candidate: 0.45
+  receipt-refs: shared-login-and-federation; native4370414143
+  note: EDN number readers and symbol readers have different macro boundaries. Preserve the number-to-dispatch boundary before standard reading can erase discarded data, while leaving literal symbol and keyword spellings intact. Test integer, signed, decimal, exponent and nested forms through actual ledger completion.
+
+- ts: 2026-10-25T10:56:21.439194+00:00
+  origin: receipt-river-native-review-budget
+  p-efficiency: 0.8
+  p-friction: 0.57
+  p-skill-candidate: 0.38
+  receipt-refs: heartbeat4-rr-review-budget-proof.json; native40183222296
+  note: A completed deterministic build does not imply the native review completed. Inspect actual cancelled job duration and immutable callee; use the existing accepted bounded budget instead of retrying a hardcoded forty-five-minute job or treating cancellation as provider quota. No spore promoted.
+
+
+## 2026-10-25T12:09:00.715821+00:00 — character metadata boundary verification
+
+- Receipt: latest owner-built test-run; efficiency0.80, friction0.37, skill-candidate0.20.
+- The native review failed its lifecycle boundary and supplies no approval, but its explicitly unverified candidate was independently reproduced through the actual compiled standard reader. A character token followed by metadata hid discard syntax from lexical admission. Preserve the failed trace, fix the owning boundary, and require fresh full review rather than widening host permissions or treating raw output as approval.
+- RED47tests436assertions9fail; GREEN47/436PASS, lint/boundary0warnings, release0warnings, built legacy publicAPI15PASS. No historical receipt rewrite, native settlement, deployment or spore promotion.
+
+
+## 2026-10-25T12:40:03.136821+00:00 — physical source lines before semantic ledger admission
+
+- Receipt: latest owner-built test-run; efficiency0.84, friction0.25, skill-candidate0.18.
+- A hash binds supplied bytes but does not prove one vector element is one physical ledger line. Verify the existing physical framing contract before the reader can skip comments or interpret embedded line breaks. Adopt the reviewer's exact narrow check after actual regression.
+- RED49tests495assertions26fail; GREEN49/495PASS, lint/boundary0warnings, release0warnings, legacybuiltAPI15PASS. Escaped line-break data still admitted; raw bytes and historical validity preserved. No spore, native approval or deployment credit.
+
+- ts: 2026-10-25T13:41:35.070710Z
+  origin: raw-edn-character-token-positive-coverage
+  p-efficiency: 0.90
+  p-friction: 0.19
+  p-skill-candidate: 0.25
+  receipt-refs: 06cec650-0d4f-47c3-bb5f-d3b0155c7e49; review5643350481; cr-comment:v1:0f87baf15d7064fb29ae5bb5
+  note: Source-language token regressions must construct raw source bytes. Serializing a ClojureScript character through pr-str tests a string representation instead. Seven direct EDN tokens pass the actual ledger decoder, preserve raw bytes, decode expected values, and retain raw metadata invalidity beside explicit completion. Owning suite50tests523assertionsPASS, lint and extern boundary zero warnings/errors; no spore or approval credit.
