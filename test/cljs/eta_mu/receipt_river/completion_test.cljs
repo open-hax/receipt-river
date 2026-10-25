@@ -109,6 +109,19 @@
                                 {:repo "riatzukiza/axxium" :pi "identity implementation"})]
       (is (:ok (api/validate-ledger [source corrected])) (pr-str literal)))))
 
+(deftest raw-character-tokens-remain-admissible
+  (doseq [[token value] [["\\#" "#"] ["\\\"" "\""] ["\\\\" "\\"]
+                         ["\\^" "^"] ["\\;" ";"] ["\\a" "a"]
+                         ["\\newline" "\n"]]]
+    (let [source (str (subs raw 0 (dec (count raw))) " :note " token "}")
+          corrected (correction 1 (crypto/short-sha256 source 64)
+                                {:repo "riatzukiza/axxium" :pi "identity implementation"})
+          result (api/validate-ledger [source corrected])]
+      (is (:ok result) token)
+      (is (false? (:raw-ok result)) token)
+      (is (= value (get-in result [:rows 0 :event :note])) token)
+      (is (= source (get-in result [:rows 0 :line])) token))))
+
 (deftest malformed-decisions-containers-refuse-on-otherwise-valid-ledger
   (doseq [decisions [nil false true "bad" []]]
     (let [event (:event (api/validate-line completion 1))

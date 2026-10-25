@@ -208,3 +208,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
 - Receipt: latest owner-built test-run; efficiency0.84, friction0.25, skill-candidate0.18.
 - A hash binds supplied bytes but does not prove one vector element is one physical ledger line. Verify the existing physical framing contract before the reader can skip comments or interpret embedded line breaks. Adopt the reviewer's exact narrow check after actual regression.
 - RED49tests495assertions26fail; GREEN49/495PASS, lint/boundary0warnings, release0warnings, legacybuiltAPI15PASS. Escaped line-break data still admitted; raw bytes and historical validity preserved. No spore, native approval or deployment credit.
+
+- ts: 2026-10-25T13:41:35.070710Z
+  origin: raw-edn-character-token-positive-coverage
+  p-efficiency: 0.90
+  p-friction: 0.19
+  p-skill-candidate: 0.25
+  receipt-refs: 06cec650-0d4f-47c3-bb5f-d3b0155c7e49; review5643350481; cr-comment:v1:0f87baf15d7064fb29ae5bb5
+  note: Source-language token regressions must construct raw source bytes. Serializing a ClojureScript character through pr-str tests a string representation instead. Seven direct EDN tokens pass the actual ledger decoder, preserve raw bytes, decode expected values, and retain raw metadata invalidity beside explicit completion. Owning suite50tests523assertionsPASS, lint and extern boundary zero warnings/errors; no spore or approval credit.
