@@ -186,3 +186,11 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.45
   receipt-refs: shared-login-and-federation; native4370414143
   note: EDN number readers and symbol readers have different macro boundaries. Preserve the number-to-dispatch boundary before standard reading can erase discarded data, while leaving literal symbol and keyword spellings intact. Test integer, signed, decimal, exponent and nested forms through actual ledger completion.
+
+- ts: 2026-10-25T10:56:21.439194+00:00
+  origin: receipt-river-native-review-budget
+  p-efficiency: 0.8
+  p-friction: 0.57
+  p-skill-candidate: 0.38
+  receipt-refs: heartbeat4-rr-review-budget-proof.json; native40183222296
+  note: A completed deterministic build does not imply the native review completed. Inspect actual cancelled job duration and immutable callee; use the existing accepted bounded budget instead of retrying a hardcoded forty-five-minute job or treating cancellation as provider quota. No spore promoted.
