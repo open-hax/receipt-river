@@ -136,3 +136,12 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   p-skill-candidate: 0.1
   spore: none
   note: Fresh organization review exposed line-terminator hash and malformed decisions container boundaries. Added failing regressions before owner fixes; original source lines and ledger history preserved. Existing boundary-testing guidance suffices; no spore or promotion.
+
+- ts: "2026-10-25T05:34:47.312976+00:00"
+  origin: shared-login-receipt-owner-provenance-clarification
+  p-efficiency: 0.9
+  p-friction: 0.1
+  p-skill-candidate: 0
+  spore: none
+  receipt-refs: 8823f23a-5fac-424e-99dc-68643cc72b00,95ca57546fc7c677555191ea2db83754d090ef5a
+  note: Append-only clarification of the prior undated shared-login receipt-owner organization follow-up. Its verification is recorded by receipt8823f23a at2026-10-24T05:01:01.358Z and commit95ca575. Prior complete ledger SHA256=c8e242918868bdf205da76e013ad679582861a1551b83c5d2aeed6a17e6b39b0. Historical bytes and event times are unchanged; this timestamp records the clarification, not a backdated run.
