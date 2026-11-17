@@ -130,3 +130,8 @@ Origin: cephalon-receipt-timestamp-append-correction-20261009. CodeRabbit review
   spore: none
   receipt-refs: receipt-no-git-context-GREEN-20261009
   note: Keep file-location fallback separate from successfully resolved attribution. Source ownership and real consumer negatives prevent permissive integration drift. Existing lessons suffice, no spore/promotion.
+
+## MiMo consumer retirement 2026-11-17
+- Scoped pin-only migration to merged eta-mu#388. Gate/auth bytes preserved.
+- Friction: source inventory can drift; compare fresh default, not cached caller content.
+- Local actionlint and exact-delta checks passed; hosted verification pending. No spore promoted.
